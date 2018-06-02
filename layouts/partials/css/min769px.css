@@ -11,3 +11,8 @@ div.main .content .markdown pre {
 width: 110%;
 margin-left: -4%;
 }
+
+/* Mailchimp */
+#mc_embed_signup input.email {
+    width: 80%;
+}

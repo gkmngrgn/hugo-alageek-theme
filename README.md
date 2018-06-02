@@ -13,7 +13,6 @@ This is a fork from the [Cocoa Enhanced](https://github.com/mtn/cocoa-eh-hugo-th
 * Syntax highlighting with `hightlightjs`.
 * Progressive images.
 * Twitter cards support.
-* Disqus and Isso support.
 * LaTeX support with MathJax.
 
 #### Typography
