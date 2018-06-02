@@ -6,16 +6,17 @@
 <body>
 
 {{ if or (.Site.Params.small_banner_logo) (.IsPage) }}
-<div class="header column">
+    <div class="header column">
 {{ else }}
-<div class="header header-home column">
+    <div class="header header-home column">
 {{ end }}
     <div class="container">
         {{ if (not (isset .Site.Params "logofile")) }}
-        <a href="https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Configuration#logo">Logo HOWTO</a>
+            <!-- TODO: optimize this part. -->
         {{ else if ne .Site.Params.logofile "" }}
-        <a href="{{ .Site.BaseURL }}"><img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo"></a>
+            <a href="{{ .Site.BaseURL }}"><img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo"></a>
         {{ end }}
+
         <div class="content">
             <a href="{{ .Site.BaseURL }}"><div class="name"><h1>{{ .Site.Title }}</h1></div></a>
             <nav>

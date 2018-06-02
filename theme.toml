@@ -1,17 +1,17 @@
-name = "Cocoa-EH"
+name = "alaGeek"
 license = "MIT"
-licenselink = "https://github.com/fuegowolf/cocoa-eh-hugo-theme/blob/master/LICENSE.md"
-description = "Cocoa Enhanced is a clean, fast and responsive theme with cool typography."
-homepage = "https://github.com/fuegowolf/cocoa-eh-hugo-theme"
+licenselink = ""
+description = "Cocoa Enhanced based, alaGeek website specific theme."
+homepage = "https://alageek.com"
 tags = ["clean", "fast", "responsive", "typography"]
-features = ["flexible", "fast", "highlights", "progressive images", "disqus"]
-min_version = 0.20.2
+features = ["flexible", "fast", "highlights", "progressive images"]
+min_version = 0.40.3
 
 [author]
-    name = "Alexis Tacnet"
-    homepage = "https://github.com/fuegowolf"
+    name = "Gökmen Görgen"
+    homepage = "https://gokmengorgen.net"
 
 [original]
-    name = "Nishanth Shanmugham"
-    homepage = "https://github.com/nishanths"
-    repo = "https://www.github.com/nishanths/cocoa-hugo-theme"
+    name = "Alexis Tacnet"
+    homepage = "https://fuegowolf.me/"
+    repo = "https://github.com/fuegowolf/cocoa-eh-hugo-theme"
