@@ -166,13 +166,13 @@ div.header .name {
   font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
   {{ if isset .Site.Params "titlestyle" }}
-      {{ if in "capitalize uppercase lowercase none full-width" .Site.Params.titlestyle }}
-  text-transform: {{ .Site.Params.titlestyle }};
-      {{ else }}
+    {{ if in "capitalize uppercase lowercase none full-width" .Site.Params.titlestyle }}
+      text-transform: {{ .Site.Params.titlestyle }};
+    {{ else }}
       {{ errorf "This titlestyle is not a valid text-transform css parameter: %s" .Site.Params.titlestyle }}
-      {{ end }}
+    {{ end }}
   {{ else }}
-  text-transform: uppercase;
+    text-transform: uppercase;
   {{ end }}
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -292,7 +292,15 @@ div.main .content .page-heading {
   font-weight: 700;
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
-  text-transform: uppercase;
+  {{ if isset .Site.Params "titlestyle" }}
+    {{ if in "capitalize uppercase lowercase none full-width" .Site.Params.titlestyle }}
+      text-transform: {{ .Site.Params.titlestyle }};
+    {{ else }}
+      {{ errorf "This titlestyle is not a valid text-transform css parameter: %s" .Site.Params.titlestyle }}
+    {{ end }}
+  {{ else }}
+    text-transform: uppercase;
+  {{ end }}
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -721,7 +729,7 @@ kbd {
 /* Fonts */
 
 {{ if not .Site.Params.disablefancyfonts  }}
-.wf-raleway-n4-active body, 
+.wf-raleway-n4-active body,
 .wf-raleway-n4-active div.header nav ul a,
 .wf-raleway-n7-active div.main .content .page-heading,
 .wf-raleway-n2-active div.main .container.f04 .content .num,
@@ -750,25 +758,20 @@ kbd {
     padding: 0 20px 20px 20px;
 }
 
-    #mc_embed_signup label {
-        font-weight: bold;
-        display: block;
-        font-size: 20px;
-    }
+#mc_embed_signup label {
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+}
 
-    #mc_embed_signup input.email {
-        width: 100%;
-        font-size: 14px;
-        padding: 10px;
-    }
+#mc_embed_signup input.email {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+}
 
-    #mc_embed_signup input.button {
-        font-size: 14px;
-        padding: 5px 20px;
-        margin-top: 7px;
-    }
-
-div.main .content .page-heading {
-    font-size: 28px;
-    text-transform: initial;
+#mc_embed_signup input.button {
+    font-size: 14px;
+    padding: 5px 20px;
+    margin-top: 7px;
 }
