@@ -40,7 +40,6 @@
             </div>
             <div class="markdown">
                 {{ partial "content" . }}
-                <br>
             </div>
             {{ if .Site.Params.share }}
                 <div class="share">
@@ -58,6 +57,10 @@
                     {{ end }}
                     {{ if .Site.Params.email }}
                         <a href="mailto:{{ .Site.Params.email }}" class="ssk ssk-email"></a>
+                    {{ end }}
+                    {{ if .Site.Params.patreon }}
+                        <a href="https://www.patreon.com/bePatron?u={{ .Site.Params.patreon }}" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+                        <script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
                     {{ end }}
                 </div>
             {{ end }}
