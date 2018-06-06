@@ -147,8 +147,3 @@ flex-direction: row;
 div.main .content .navigation div {
 margin-top: 0em;
 }
-
-/* Mailchimp */
-#mc_embed_signup input.email {
-    width: 90%;
-}
