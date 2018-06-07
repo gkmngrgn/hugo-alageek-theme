@@ -1,149 +1,185 @@
 body {
--webkit-justify-content: center;
--moz-justify-content: center;
--ms-justify-content: center;
-justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
 }
+
 .non-narrow.zero-top-spacing {
-padding-top: 0 !important;
+    padding-top: 0 !important;
 }
+
 section {
-padding: 0 16px;
-margin-left: 100px;
-margin-right: 100px;
-max-width: 750px;
+    padding: 0 16px;
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: 750px;
 }
+
 div.column {
-padding: 0 16px;
-max-width: 750px;
+    padding: 0 16px;
+    max-width: 750px;
 }
+
 div.header {
-background-color: transparent;
+    background-color: transparent;
 }
+
 div.header .container {
--webkit-justify-content: flex-start;
--moz-justify-content: flex-start;
--ms-justify-content: flex-start;
-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
 }
+
 div.header .container .logo {
-margin: 0;
+    margin: 0;
 }
+
 div.header-home .container .logo {
-max-width: 180px;
-margin-left: 20px;
+    max-width: 180px;
+    margin-left: 20px;
 }
+
 div.header-home .name-home {
-padding-top: 30px;
-font-size: 40px;
+    padding-top: 30px;
+    font-size: 40px;
 }
+
 div.header-home nav ul a {
-font-size: 18px;
+    font-size: 18px;
 }
+
 div.header .content {
--webkit-align-items: flex-start;
--moz-align-items: flex-start;
--ms-align-items: flex-start;
-align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
 }
+
 div.header .name {
-color: #333333;
+    color: #333333;
 }
+
 div.header nav {
-font-size: 14px;
-margin-bottom: 0;
+    font-size: 14px;
+    margin-bottom: 3px;
 }
+
 div.header nav ul {
-text-align: left;
+    text-align: left;
 }
+
 div.header nav ul a {
-color: #666666;
+    color: #666666;
 }
+
 div.header nav ul a:hover {
-color: #333333;
+    color: #333333;
 }
+
 div.footer {
-background-color: transparent;
+    background-color: transparent;
 }
+
 div.footer .container {
-flex-direction: row;
+    flex-direction: row;
 }
+
 div.footer .container a {
-margin-left: 3px;
-margin-right: 3px;
-color: #666666;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #666666;
 }
+
 div.footer .container a:hover {
-color: #333333;
+    color: #333333;
 }
+
 div.footer .container a .icon {
-font-size: 18px;
+    font-size: 18px;
 }
+
 div.footer .container a .icon.larger {
-font-size: 20px;
+    font-size: 20px;
 }
+
 div.main .content .front-matter .date,
 div.main .content .front-matter .author,
 div.main .content .front-matter .tags,
 div.main .content .front-matter .word-count,
 div.main .content .front-matter .middot:before {
-display: initial;
+    display: initial;
 }
+
 div.main .container.f04 {
--webkit-justify-content: flex-start;
--moz-justify-content: flex-start;
--ms-justify-content: flex-start;
-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
 }
+
 div.main .container.f04 .content {
--webkit-align-items: flex-start;
--moz-align-items: flex-start;
--ms-align-items: flex-start;
-align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
 }
+
 div.main .container.f04 .content .num {
-margin: 0 0 10px 0;
-font-size: 32px;
+    margin: 0 0 10px 0;
+    font-size: 32px;
 }
+
 div.main .container.f04 .content .detail {
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 .container {
-padding: 0 30px;
+    padding: 0 30px;
 }
+
 div.header {
-padding-top: 60px;
-padding-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
 div.footer {
-padding-top: 30px;
-padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 60px;
 }
+
 div.main {
-padding-top: 0;
+    padding-top: 0;
 }
+
 div.main .container .content .post-item {
-display: flex;
-list-style: none;
-padding-left: 1.5em;
+    display: flex;
+    list-style: none;
+    padding-left: 1.5em;
 }
+
 div.main .container .content .post-item .meta {
-display: block;
+    display: block;
 }
+
 div.main.post {
-padding-top: 60px;
-padding-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
 div.main .content .markdown blockquote {
-padding-right: 5rem;
-padding-left: 1.25rem;
+    padding-right: 5rem;
+    padding-left: 1.25rem;
 }
+
 div.main .content .navigation {
--webkit-flex-direction: row;
--moz-flex-direction: row;
--ms-flex-direction: row;
-flex-direction: row;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
+
 div.main .content .navigation div {
-margin-top: 0em;
+    margin-top: 0em;
 }

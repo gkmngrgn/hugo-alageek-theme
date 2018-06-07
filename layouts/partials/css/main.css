@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Nexa Bold';
-  src: url('{{ .Site.BaseURL }}fonts/Nexa Bold.otf');
+    font-family: 'Nexa Bold';
+    src: url('{{ .Site.BaseURL }}fonts/Nexa Bold.otf');
 }
 
 html, body, div, span, applet, object, iframe,
@@ -16,175 +16,190 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, div.column {
-  display: block;
+    display: block;
 }
+
 body {
-  line-height: 1;
+    line-height: 1;
 }
+
 ol, ul {
-  list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-  quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+    content: '';
+    content: none;
 }
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 a,
 a:visited,
 a:focus,
 a:active {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 html {
-  height: 100%;
-  font-size: 16px;
+    height: 100%;
+    font-size: 16px;
 }
+
 body {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  min-height: 100%;
-  font-weight: 400;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  color: #111111;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility !important;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100%;
+    font-weight: 400;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    color: #111111;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility !important;
 }
+
 .icon {
-  text-rendering: geometricPrecision !important;
+    text-rendering: geometricPrecision !important;
 }
+
 section {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 100%;
 }
+
 div.column {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 100%;
 }
+
 .container {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    width: 100%;
 }
+
 div.header .container {
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
 }
+
 div.header .content {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
+
 div.header .container .logo {
-  max-width: 100px;
-  margin-left: -2em;
+    max-width: 100px;
+    margin: 0;
+    vertical-align: middle;
 }
+
+div.header .container .patreon {
+    font-weight: bold;
+    color: rgb(249, 104, 84); /* patreon color */
+}
+
 div.header .name {
-  padding-top: 20px;
-  font-size: 28px;
-  font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
-  letter-spacing: -0.005rem;
-  {{ if isset .Site.Params "titlestyle" }}
+    font-size: 28px;
+    font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
+    letter-spacing: -0.005rem;
+    {{ if isset .Site.Params "titlestyle" }}
     {{ if in "capitalize uppercase lowercase none full-width" .Site.Params.titlestyle }}
-      text-transform: {{ .Site.Params.titlestyle }};
+        text-transform: {{ .Site.Params.titlestyle }};
     {{ else }}
-      {{ errorf "This titlestyle is not a valid text-transform css parameter: %s" .Site.Params.titlestyle }}
+        {{ errorf "This titlestyle is not a valid text-transform css parameter: %s" .Site.Params.titlestyle }}
     {{ end }}
-  {{ else }}
+    {{ else }}
     text-transform: uppercase;
-  {{ end }}
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  color: #333333;
+    {{ end }}
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    color: #333333;
 }
-div.header nav {
-  margin-bottom: 16px;
-}
+
 div.header nav ul {
   list-style: none;
-  text-align: center;
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flexbox;
@@ -750,4 +765,4 @@ kbd {
 .wf-ubuntu-mono-n4-active div.main .content .markdown pre {
       font-family: 'Ubuntu Mono';
 }
-{{ end  }}
+{{ end }}

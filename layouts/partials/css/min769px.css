@@ -1,13 +1,13 @@
 div.main .content .markdown figure {
-width: 110%;
-margin-left: -4%;
+    width: 110%;
+    margin-left: -4%;
 }
 div.main .content .markdown img {
-max-width: 110%;
-width: 110%;
-margin-left: -4%;
+    max-width: 110%;
+    width: 110%;
+    margin-left: -4%;
 }
 div.main .content .markdown pre {
-width: 110%;
-margin-left: -4%;
+    width: 110%;
+    margin-left: -4%;
 }
