@@ -34,6 +34,7 @@ div.header .container {
 
 div.header .container .logo {
     margin: 0;
+    display: initial;
 }
 
 div.header-home .container .logo {
@@ -44,6 +45,28 @@ div.header-home .container .logo {
 div.header-home .name-home {
     padding-top: 30px;
     font-size: 40px;
+}
+
+div.header nav.second-nav ul {
+    list-style: none;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: -ms-inline-flex;
+    display: inline-flex;
+}
+
+div.header nav.second-nav ul li {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+div.header nav.second-nav ul li:first-child {
+    margin-left: 0;
+}
+
+div.header nav.second-nav ul li:last-child {
+    margin-right: 0;
 }
 
 div.header-home nav ul a {

@@ -145,17 +145,6 @@ div.column {
     width: 100%;
 }
 
-div.header .container {
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-}
-
 div.header .content {
     display: -webkit-flex;
     display: -moz-flex;
@@ -179,6 +168,11 @@ div.header .container .patreon {
     color: rgb(249, 104, 84); /* patreon color */
 }
 
+div.header .container .ko-fi {
+    font-weight: bold;
+    color: #df5000;
+}
+
 div.header .name {
     font-size: 28px;
     font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
@@ -198,35 +192,40 @@ div.header .name {
     color: #333333;
 }
 
-div.header nav ul {
-  list-style: none;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flexbox;
-  display: -ms-inline-flex;
-  display: inline-flex;
+div.header nav.first-nav ul {
+    list-style: none;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: -ms-inline-flex;
+    display: inline-flex;
 }
-div.header nav ul li {
-  margin-left: 6px;
-  margin-right: 6px;
+
+div.header nav.first-nav ul li {
+    margin-left: 6px;
+    margin-right: 6px;
 }
-div.header nav ul li:first-child {
-  margin-left: 0;
+
+div.header nav.first-nav ul li:first-child {
+    margin-left: 0;
 }
-div.header nav ul li:last-child {
-  margin-right: 0;
+
+div.header nav.first-nav ul li:last-child {
+    margin-right: 0;
 }
+
 div.header nav ul a {
-  color: #555555;
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    color: #555555;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
+
 div.header nav ul a:hover {
   color: #111111;
 }
