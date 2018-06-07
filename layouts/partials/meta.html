@@ -18,3 +18,6 @@
 <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.meta_img | default .Site.Params.logofile }}" />
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:description" content="{{ .Description | default .Site.Params.description }}" />
+{{ if .Site.Params.flattr }}
+    <meta name="flattr:id" content="{{ .Site.Params.flattr }}">
+{{ end }}
