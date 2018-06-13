@@ -28,12 +28,6 @@
   </style>
 {{ end }}
 
-{{ if .Site.Params.colors }}
-  <style type="text/css" media="screen">
-    {{ partial "css/colors.css" . | safeCSS }}
-  </style>
-{{ end }}
-
 {{ range .Site.Params.extracssfiles }}
   <link rel="stylesheet" href="{{ . | absURL }}">
 {{ end }}
