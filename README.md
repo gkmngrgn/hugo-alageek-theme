@@ -27,7 +27,6 @@ This is a fork from the [Cocoa Enhanced](https://github.com/mtn/cocoa-eh-hugo-th
 
 #### Typography
 
-* *Nexa Bold* for the blog name, a strong and opinionated font
 * *Raleway* for the titles, light but clearly visible
 * *Merriweather* for the text, an awesome sans serif font to read without difficulties
 * *Ubuntu Mono* for the code

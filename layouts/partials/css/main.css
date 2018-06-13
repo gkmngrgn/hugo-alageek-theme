@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Nexa Bold";
-    src: url("{{ .Site.BaseURL }}fonts/Nexa Bold.otf");
-}
-
 html,
 body,
 div,
@@ -256,7 +251,8 @@ div.header .container .ko-fi {
 
 div.header .name {
     font-size: 28px;
-    font-family: "Nexa Bold", "Helvetica Neue", "Arial", sans-serif;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    font-weight: bold;
     letter-spacing: -0.005rem;
     text-transform: "capitalize";
     -moz-osx-font-smoothing: grayscale;
