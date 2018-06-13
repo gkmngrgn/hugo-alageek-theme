@@ -20,10 +20,6 @@
   <script src="{{ .Site.BaseURL }}js/progressively.min.js" defer></script>
 {{ end }}
 
-{{ if .Site.Params.share }}
-  <script src="{{ .Site.BaseURL }}js/social-share-kit.min.js" defer></script>
-{{ end }}
-
 {{ template "_internal/google_analytics_async.html" . }}
 
 <script>
@@ -33,14 +29,6 @@
     {{ end }}
     {{ if .Site.Params.progressively }}
       progressively.init({delay: 30, throttle: 50});
-    {{ end }}
-    {{ if .Site.Params.share }}
-      SocialShareKit.init({
-        twitter: {
-            text: '',
-            {{ if .Site.Params.twitter }}via: '{{ .Site.Params.twitter }}'{{ end }}
-        }
-      });
     {{ end }}
   };
 </script>
