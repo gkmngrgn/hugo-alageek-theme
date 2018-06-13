@@ -14,6 +14,16 @@ This is a fork from the [Cocoa Enhanced](https://github.com/mtn/cocoa-eh-hugo-th
 * Progressive images.
 * Twitter cards support.
 * LaTeX support with MathJax.
+* You can add extra scripts with `footer_extra_scripts.html`.
+
+## Dependency Versions
+
+* bootstrap: 4.1.1
+* highlightjs: 9.12.0
+* jquery-slim: 3.3.1
+* mathjax: 2.7.4
+* popperjs: 1.14.3
+* progressively: 1.2.5
 
 #### Typography
 

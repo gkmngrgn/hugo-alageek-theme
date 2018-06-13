@@ -1,19 +1,15 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" crossorigin="anonymous" />
 
 <style media="screen">
     {{ partial "css/main.css" . | safeCSS }}
 </style>
 
 {{ if .Site.Params.highlightjs }}
-    <style type="text/css" media="screen">
-        {{ partial "css/highlight.min.css" . | safeCSS }}
-    </style>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
 {{ end }}
 
 {{ if .Site.Params.progressively }}
-    <style type="text/css" media="screen">
-        {{ partial "css/progressively.min.css" . | safeCSS }}
-    </style>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/progressively/1.2.5/progressively.min.css" integrity="sha256-xbqLYBMsjpuCihs+3Fgp/MFMtPdo2SWKoOjEWOqR4X0=" crossorigin="anonymous" />
 {{ end }}
 
 {{ range .Site.Params.extracssfiles }}
