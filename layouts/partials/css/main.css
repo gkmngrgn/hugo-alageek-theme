@@ -741,8 +741,6 @@ kbd {
 }
 
 /* Fonts */
-
-{{ if not .Site.Params.disablefancyfonts  }}
 .wf-raleway-n4-active body,
 .wf-raleway-n4-active div.header nav ul a,
 .wf-raleway-n7-active div.main .content .page-heading,
@@ -753,15 +751,14 @@ kbd {
 .wf-raleway-n7-active div.main .content .markdown h4,
 .wf-raleway-n7-active div.main .content .markdown h5,
 .wf-raleway-n7-active div.main .content .markdown h6 {
-      font-family: 'Raleway';
+    font-family: 'Raleway';
 }
 
 .wf-merriweather-n3-active div.main .content .markdown {
-      font-family: 'Merriweather';
+    font-family: 'Merriweather';
 }
 
 .wf-ubuntu-mono-n4-active div.main .content .markdown code,
 .wf-ubuntu-mono-n4-active div.main .content .markdown pre {
-      font-family: 'Ubuntu Mono';
+    font-family: 'Ubuntu Mono';
 }
-{{ end }}
