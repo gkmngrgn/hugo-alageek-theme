@@ -14,7 +14,7 @@ This is a fork from the [Cocoa Enhanced](https://github.com/mtn/cocoa-eh-hugo-th
 * Progressive images.
 * Twitter cards support.
 * LaTeX support with MathJax.
-* You can add extra scripts with `footer_extra_scripts.html`.
+* You can add extra scripts with `footer_extra.html`.
 
 ## Dependency Versions
 

@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-
-{{ partial "head.html" . }}
-
-<body>
-
-{{ if or (.Site.Params.small_banner_logo) (.IsPage) }}
-    <div class="header column">
-{{ else }}
-    <div class="header header-home column">
-{{ end }}
+<div class="header{{ if or (.Site.Params.small_banner_logo) (.IsPage) }}{{ else }} header-home{{ end }} column">
     <div class="container">
         {{ if (not (isset .Site.Params "logofile")) }}
             <!-- TODO: optimize this part. -->

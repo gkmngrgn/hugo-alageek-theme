@@ -1,16 +1,20 @@
-{{ partial "header.html" . }}
-<div class="main column">
-    <div class="container">
-        <div class="content">
-            <div class="posts">
-                <div class="page-heading">Posts about {{ .Title }}</div>
-                <ul>
-                    {{ range .Data.Pages.ByPublishDate }}
-                        {{ partial "li.html" . }}
-                    {{ end }}
-                </ul>
+{{ define "main" }}
+    {{ partial "header.html" . }}
+
+    <div class="main column">
+        <div class="container">
+            <div class="content">
+                <div class="posts">
+                    <div class="page-heading">Posts about {{ .Title }}</div>
+                    <ul>
+                        {{ range .Data.Pages.ByPublishDate }}
+                            {{ partial "list.html" . }}
+                        {{ end }}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
-{{ partial "footer.html" . }}
+
+    {{ partial "footer.html" . }}
+{{ end }}

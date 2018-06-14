@@ -604,3 +604,18 @@ div.main .content .share a {
 .wf-ubuntu-mono-n4-active div.main .content .markdown pre {
     font-family: "Ubuntu Mono";
 }
+
+/* 404 Page */
+.page.not-found .logo {
+    vertical-align: middle;
+    max-width: 300px;
+}
+.page.not-found .content {
+    margin: 3em auto;
+    text-align: center;
+}
+.page.not-found .header {
+    margin-left: initial;
+    margin-right: intial;
+    padding: 0 !important;
+}
