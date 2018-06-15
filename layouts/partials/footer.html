@@ -1,78 +1,69 @@
-<div class="footer column">
+<div class="mt-4 mb-4 footer">
     <div class="container">
-
-        {{ if .Site.Params.githubRepo }}
-            <div class="copyright">
-            {{ $length := len ( split .Site.Params.githubRepo "/" ) }}
-            {{ if eq $length 2 }}
-                <a href="https://github.com/{{ .Site.Params.githubRepo }}/tree/master/content/{{ replace .File.Path "\\" "/" }}" target="_blank">View this post on GitHub</a>
-            {{ else }}
-                <a href="https://github.com/{{ .Site.Params.githubRepo }}/content/{{ replace .File.Path "\\" "/" }}" target="_blank">View this post on GitHub</a>
-            {{ end }}
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-5">
+                {{ if .Site.Params.copyright }}
+                    <div class="text-left">
+                        {{ if .Site.Params.copyrightUrl }}
+                            <a href="{{ .Site.Params.copyrightUrl }}">{{ .Site.Params.copyright }}</a>
+                        {{ else }}
+                            <a href="{{ .Site.BaseURL }}license">{{ .Site.Params.copyright }}</a>
+                        {{ end }}
+                    </div>
+                {{ end }}
             </div>
-        {{ end }}
+            <div class="col-sm-12 col-md-5">
+                <div class="text-right">
+                    {{ if .Site.Params._500px }}
+                        <a href="https://500px.com/{{ .Site.Params._500px }}" target="_blank">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/500px.svg" alt="500px" />
+                        </a>
+                    {{ end }}
 
-        <div class="copyright">
+                    {{ if .Site.Params.gitlab }}
+                        <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/gitlab.svg" alt="gitlab" />
+                        </a>
+                    {{ end }}
 
-        {{ if .Site.Params.copyright }}
-            {{ if .Site.Params.copyrightUrl }}
-                <a href="{{ .Site.Params.copyrightUrl }}">{{ .Site.Params.copyright }}</a>
-            {{ else }}
-                <a href="{{ .Site.BaseURL }}license">{{ .Site.Params.copyright }}</a>
-            {{ end }}
-        {{ end }}
+                    {{ if .Site.Params.facebook }}
+                        <a href="https://facebook.com/{{ .Site.Params.facebook }}" target="_blank">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/facebook.svg" alt="facebook" />
+                        </a>
+                    {{ end }}
 
-        </div>
-        <div class="icons">
+                    {{ if .Site.Params.github }}
+                        <a href="https://github.com/{{ .Site.Params.github }}" target="_blank">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/github.svg" alt="github" />
+                        </a>
+                    {{ end }}
 
-        {{ if .Site.Params._500px }}
-            <a href="https://500px.com/{{ .Site.Params._500px }}" target="_blank">
-                <img class="icon" src="{{ .Site.BaseURL }}img/500px.svg" alt="500px" />
-            </a>
-        {{ end }}
+                    {{ if .Site.Params.twitter }}
+                        <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/twitter.svg" alt="twitter" />
+                        </a>
+                    {{ end }}
 
-        {{ if .Site.Params.gitlab }}
-            <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank">
-                <img class="icon" src="{{ .Site.BaseURL }}img/gitlab.svg" alt="gitlab" />
-            </a>
-        {{ end }}
+                    {{ if .Site.Params.linkedin }}
+                        <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/linkedin.svg" alt="linkedin" />
+                        </a>
+                    {{ end }}
 
-        {{ if .Site.Params.facebook }}
-            <a href="https://facebook.com/{{ .Site.Params.facebook }}" target="_blank">
-                <img class="icon" src="{{ .Site.BaseURL }}img/facebook.svg" alt="facebook" />
-            </a>
-        {{ end }}
+                    {{ if .Site.Params.email }}
+                        <a href="mailto:{{ .Site.Params.email }}">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/email.svg" alt="email" />
+                        </a>
+                    {{ end }}
 
-        {{ if .Site.Params.github }}
-            <a href="https://github.com/{{ .Site.Params.github }}" target="_blank">
-                <img class="icon" src="{{ .Site.BaseURL }}img/github.svg" alt="github" />
-            </a>
-        {{ end }}
+                    {{ if .Site.RSSLink }}
+                        <a href="{{ .Site.RSSLink }}">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/rss.svg" alt="rss" />
+                        </a>
+                    {{ end }}
 
-        {{ if .Site.Params.twitter }}
-            <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank">
-                <img class="icon" src="{{ .Site.BaseURL }}img/twitter.svg" alt="twitter" />
-            </a>
-        {{ end }}
-
-        {{ if .Site.Params.linkedin }}
-            <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank">
-                <img class="icon" src="{{ .Site.BaseURL }}img/linkedin.svg" alt="linkedin" />
-            </a>
-        {{ end }}
-
-        {{ if .Site.Params.email }}
-            <a href="mailto:{{ .Site.Params.email }}">
-                <img class="icon" src="{{ .Site.BaseURL }}img/email.svg" alt="email" />
-            </a>
-        {{ end }}
-
-        {{ if .Site.RSSLink }}
-            <a href="{{ .Site.RSSLink }}">
-                <img class="icon" src="{{ .Site.BaseURL }}img/rss.svg" alt="rss" />
-            </a>
-        {{ end }}
-
+                </div>
+            </div>
         </div>
     </div>
 </div>

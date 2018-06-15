@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ partial "header.html" . }}
+    {{ partial "header" . }}
 
     <div class="main column">
         <div class="container">
@@ -18,7 +18,7 @@
                     <ul>
                         {{ range .Data.Pages.ByPublishDate }}
                             {{ if ne .Title $globalTitle }}
-                                {{ partial "list.html" . }}
+                                {{ partial "list" . }}
                             {{ end }}
                         {{ end }}
                     </ul>
@@ -28,5 +28,5 @@
         </div>
     </div>
 
-    {{ partial "footer.html" . }}
+    {{ partial "footer" . }}
 {{ end }}

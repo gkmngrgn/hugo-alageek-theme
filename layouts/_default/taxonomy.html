@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ partial "header.html" . }}
+    {{ partial "header" . }}
 
     <div class="main column">
         <div class="container">
@@ -8,7 +8,7 @@
                     <div class="page-heading">Posts about {{ .Title }}</div>
                     <ul>
                         {{ range .Data.Pages.ByPublishDate }}
-                            {{ partial "list.html" . }}
+                            {{ partial "list" . }}
                         {{ end }}
                     </ul>
                 </div>
@@ -16,5 +16,5 @@
         </div>
     </div>
 
-    {{ partial "footer.html" . }}
+    {{ partial "footer" . }}
 {{ end }}
