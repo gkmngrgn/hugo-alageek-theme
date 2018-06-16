@@ -1,28 +1,25 @@
 {{ define "main" }}
     {{ partial "header" . }}
 
-    <div class="main column">
+    <div class="content">
         <div class="container">
-            <div class="content">
-                {{ $globalTitle := .Title}}
-                <div class="markdown">
-                    {{ range .Data.Pages }}
-                        {{ if eq .Title $globalTitle }}
-                            {{ partial "content" . }}
-                        {{ end }}
-                    {{ end }}
-                </div>
-                <div class="posts">
-                {{ if ne (len (where .Data.Pages "Title" "!=" $globalTitle)) 0}}
-                    <div class="page-heading">{{ .Title }}</div>
-                    <ul>
-                        {{ range .Data.Pages.ByPublishDate }}
-                            {{ if ne .Title $globalTitle }}
-                                {{ partial "list" . }}
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <div class="markdown">
+                        {{ partial "content" . }}
+                    </div>
+
+                    <div class="mx-0 mx-md-4 posts">
+                        <h1>Blog posts</h1>
+                        <ul class="list-unstyled">
+                            {{ range .Data.Pages.GroupByDate "Jan, 2006" "desc"}}
+                                <li class="groupby">{{ .Key }}</li>
+                                {{ range sort .Pages "Date" "desc" }}
+                                    {{ partial "list" . }}
+                                {{ end }}
                             {{ end }}
-                        {{ end }}
-                    </ul>
-                {{ end }}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

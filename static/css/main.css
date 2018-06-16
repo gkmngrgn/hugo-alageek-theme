@@ -1,91 +1,3 @@
-div.main .content .markdown p {
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: 1em;
-}
-div.main .content .markdown ul,
-div.main .content .markdown ol,
-div.main .content .markdown dl {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-div.main .content .markdown dt {
-    font-weight: bold;
-}
-div.main .content .markdown dd {
-    margin-bottom: 0.5rem;
-}
-div.main .content .markdown ul {
-    list-style-type: disc;
-    list-style-position: outside;
-    margin-bottom: 1.25rem;
-}
-div.main .content .markdown ol {
-    list-style-type: decimal;
-    margin-bottom: 1.25rem;
-}
-div.main .content .markdown li {
-    margin-left: 2em;
-}
-div.main .content .markdown em {
-    font-style: italic;
-}
-div.main .content .markdown strong {
-    font-weight: 700;
-}
-div.main .content .markdown hr {
-    position: relative;
-    margin: 1.75rem 0;
-    border: 0;
-    border-top: 1px solid #808080;
-    border-top: 1px solid #999999;
-}
-div.main .content .markdown abbr {
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #666666;
-    text-transform: uppercase;
-}
-div.main .content .markdown abbr[title] {
-    cursor: help;
-    border-bottom: 1px dotted #808080;
-}
-div.main .content .markdown blockquote {
-    padding: 0.5rem 1rem;
-    margin: 0.8rem 0;
-    color: #7a7a7a;
-    border-left: 0.25rem solid #e5e5e5;
-}
-div.main .content .markdown blockquote p:last-child {
-    margin-bottom: 0;
-}
-
-div.main .content .markdown table {
-    margin-bottom: 1rem;
-    width: 100%;
-    border: 1px solid #e5e5e5;
-    border-collapse: collapse;
-}
-div.main .content .markdown td,
-div.main .content .markdown th {
-    padding: 0.25rem 0.5rem;
-    border: 1px solid #e5e5e5;
-}
-div.main .content .markdown tbody tr:nth-child(odd) td,
-div.main .content .markdown tbody tr:nth-child(odd) th {
-    background-color: #f7f7f7;
-}
-div.main .content .markdown .footnotes ol {
-    list-style-type: decimal;
-    margin-left: 16px;
-}
-div.main .content .markdown .footnotes li {
-    list-style-type: unset;
-}
-div.main .content .markdown .footnote-ref {
-    font-size: 0.7em;
-}
-
 /* Global styles */
 body {
     font-family: "Raleway";
@@ -192,7 +104,6 @@ a:hover {
     font-size: 1.1em;
     line-height: 1.75em;
     color: #313537;
-    font-weight: 300;
 }
 
 .content twitterwidget {
@@ -314,6 +225,10 @@ a:hover {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+    html {
+        font-size: .8rem;
+    }
+
     .content .meta,
     .content .markdown h1,
     .content .markdown h2,
