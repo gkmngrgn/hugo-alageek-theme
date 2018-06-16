@@ -1,9 +1,9 @@
-<div class="mt-5 mb-5 header">
+<div class="my-4 my-md-5 header">
     <div class="container">
         <div class="row">
             <div class="col-auto offset-md-1">
                 {{ if .Site.Params.logofile }}
-                    <a href="{{ .Site.BaseURL }}">
+                    <a class="d-none d-md-block" href="{{ .Site.BaseURL }}">
                         <img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo">
                     </a>
                 {{ end }}
