@@ -1,43 +1,40 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-
-{{ partial "head.html" . }}
-
-<body>
-
-{{ if or (.Site.Params.small_banner_logo) (.IsPage) }}
-    <div class="header column">
-{{ else }}
-    <div class="header header-home column">
-{{ end }}
+<div class="my-4 my-md-5 header">
     <div class="container">
-        {{ if (not (isset .Site.Params "logofile")) }}
-            <!-- TODO: optimize this part. -->
-        {{ else if ne .Site.Params.logofile "" }}
-            <a href="{{ .Site.BaseURL }}"><img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo"></a>
-        {{ end }}
+        <div class="row">
+            <div class="col-auto offset-md-1 d-none d-md-block">
+                {{ if .Site.Params.logofile }}
+                    <a href="{{ .Site.BaseURL }}">
+                        <img class="ml-md-4 logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo">
+                    </a>
+                {{ end }}
+            </div>
+            <div class="col-auto align-self-center">
+                <a href="{{ .Site.BaseURL }}">
+                    <h1 class="font-weight-bold name">{{ .Site.Title }}</h1>
+                </a>
 
-        <div class="content">
-            <a href="{{ .Site.BaseURL }}"><div class="name"><h1>{{ .Site.Title }}</h1></div></a>
-            <nav>
-                <ul>
-                    {{ if ne (len (where .Site.RegularPages "Section" "blog")) 0 }}
-                        <li><a href="{{ .Site.BaseURL }}blog/">Blog</a></li>
-                    {{ end }}
-                    {{ range $.Site.Home.Sections }}
-                        {{ range first 1 (where .Pages "Section" "ne" "")}}
-                            {{ if ne .Section "blog"}}
-                            <li><a href="{{ .Section | urlize | absURL }}">{{ .Section }}</a></li>
-                            {{ end }}
-                        {{ end }}
-                    {{ end }}
-                    {{ range where .Site.RegularPages "Section" ""}}
-                        {{ if and (ne .Title "License") (ne .Title "Home")}}
-                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                        {{ end }}
+                <ul class="nav nav-primary">
+                    {{ range .Site.Menus.primary.ByWeight }}
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}" href="{{ .URL }}">
+                                {{ .Pre }}
+                                {{ .Name }}
+                            </a>
+                        </li>
                     {{ end }}
                 </ul>
-            </nav>
+
+                <ul class="nav nav-secondary">
+                    {{ range .Site.Menus.secondary.ByWeight }}
+                        <li class="nav-item">
+                            <a class="text-uppercase font-weight-bold nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}" href="{{ .URL }}">
+                                {{ .Pre }}
+                                {{ .Name }}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
         </div>
     </div>
 </div>

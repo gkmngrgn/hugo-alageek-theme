@@ -1,12 +1,18 @@
-{{ partial "header.html" . }}
-<div class="main column">
-    <div class="container">
-        <div class="content">
-            {{ partial "page-heading.html" . }}
-            <div class="markdown">
-                {{ partial "content" . }}
+{{ define "main" }}
+    {{ partial "header" . }}
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="mx-0 mx-md-4">{{ .Title }}</h1>
+                    <div class="markdown">
+                        {{ partial "content" . }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-{{ partial "footer.html" . }}
+
+    {{ partial "footer" . }}
+{{ end }}

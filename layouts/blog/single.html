@@ -1,85 +1,89 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
+    {{ partial "header" . }}
 
-<div class="main post non-narrow zero-top-spacing column">
-    <div class="container">
-        <div class="content">
-            <div class="front-matter">
-                <div class="title-container">
-                    {{ partial "page-heading" . }}
-                </div>
-                <div class="meta">
-                    <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">{{ .Date.Format .Site.Params.dateform }}</div>
-                    {{ if not .Params.noauthor }}
-                        {{ if .Params.author }}
-                            <div class="author middot" title="{{ .Params.Author }}">{{ .Params.author }}</div>
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="mx-0 mx-md-4">{{ .Title }}</h1>
+
+                    <div class="mb-4 mb-md-5 meta">
+                        <span class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">
+                            {{ .Date.Format .Site.Params.dateform }}
+                        </span>
+
+                        {{ if not .Params.noauthor }}
+                            {{ if .Params.author }}
+                                <span class="author middot" title="{{ .Params.Author }}">
+                                    {{ .Params.author }}
+                                </span>
+                            {{ end }}
                         {{ end }}
-                    {{ end }}
-                    <div class="reading-time middot">{{ .ReadingTime }} minute read</div>
-                    <div class="tags">
-                        <ul>
-                            {{ range .Params.tags }}
-                                <li class="middot"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-                            {{ end }}
-                        </ul>
-                    </div>
-                    <div class="tags">
-                        <ul>
-                            {{ if isset .Params "hacker_news_id" }}
-                                {{ if ne .Params.hacker_news_id "" }}
-                                    <li class="middot"><a href="https://news.ycombinator.com/item?id={{ .Params.hacker_news_id }}">Hacker News</a> </li>
-                                {{ end }}
-                            {{ end }}
-                            {{ if isset .Params "lobsters_id" }}
-                                {{ if ne .Params.lobsters_id "" }}
-                                    <li class="middot"><a href="https://lobste.rs/s/{{ .Params.lobsters_id }}">Lobsters</a> </li>
-                                {{ end }}
-                            {{ end }}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="markdown">
-                {{ partial "content" . }}
-            </div>
-            {{ if .Site.Params.share }}
-                <div class="share">
-                    {{ if .Site.Params.share_on_fb | default true }}
-                        <a href="" class="ssk ssk-facebook"></a>
-                    {{ end }}
-                    {{ if .Site.Params.share_on_twitter | default true }}
-                        <a href="" class="ssk ssk-twitter"></a>
-                    {{ end }}
-                    {{ if .Site.Params.share_on_googleplus | default true }}
-                        <a href="" class="ssk ssk-google-plus"></a>
-                    {{ end }}
-                    {{ if .Site.Params.share_on_linkedin | default true }}
-                        <a href="" class="ssk ssk-linkedin"></a>
-                    {{ end }}
-                    {{ if .Site.Params.email }}
-                        <a href="mailto:{{ .Site.Params.email }}" class="ssk ssk-email"></a>
-                    {{ end }}
-                </div>
-            {{ end }}
 
-            {{ if .Site.Params.posts_navigation }}
-                <div class="navigation">
-                    {{ if .PrevInSection }}
-                        <div>
-                            <img class="icon" src="/img/back.svg" alt="back" />
-                            <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
+                        <span class="reading-time middot">
+                            {{ .ReadingTime }} minute read
+                        </span>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                {{ range .Params.tags }}
+                                    <li class="d-inline middot">
+                                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
                         </div>
-                    {{ end }}
-                    <div style="width: 100%;"></div>
-                    {{ if .NextInSection }}
-                        <div>
-                            <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a>
-                            <img class="icon" src="/img/next.svg" alt="next" />
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                {{ if isset .Params "hacker_news_id" }}
+                                    {{ if ne .Params.hacker_news_id "" }}
+                                        <li class="d-inline middot">
+                                            <a href="https://news.ycombinator.com/item?id={{ .Params.hacker_news_id }}">Hacker News</a>
+                                        </li>
+                                    {{ end }}
+                                {{ end }}
+                                {{ if isset .Params "lobsters_id" }}
+                                    {{ if ne .Params.lobsters_id "" }}
+                                        <li class="d-inline middot">
+                                            <a href="https://lobste.rs/s/{{ .Params.lobsters_id }}">Lobsters</a>
+                                        </li>
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="markdown">
+                        {{ partial "content" . }}
+                    </div>
+
+                    {{ if .Site.Params.posts_navigation }}
+                        <div class="navigation">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    {{ if .PrevInSection }}
+                                        <div class="mx-0 mx-md-4 mt-4 text-left">
+                                            <img class="icon" src="/img/back.svg" alt="back" />
+                                            <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
+                                        </div>
+                                    {{ end }}
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    {{ if .NextInSection }}
+                                        <div class="mx-0 mx-md-4 mt-4 text-right">
+                                            <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a>
+                                            <img class="icon" src="/img/next.svg" alt="next" />
+                                        </div>
+                                    {{ end }}
+                                </div>
+                            </div>
                         </div>
                     {{ end }}
                 </div>
-            {{ end }}
+            </div>
         </div>
     </div>
-</div>
 
-{{ partial "footer.html" . }}
+    {{ partial "footer" . }}
+{{ end }}

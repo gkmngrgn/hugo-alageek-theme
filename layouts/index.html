@@ -1,48 +1,53 @@
-{{ partial "header.html" . }}
-<div class="main column">
-    <div class="container">
-        <div class="content">
-            {{ range where .Data.Pages "Title" "Home" }}
-                <div class="markdown">
-                {{ .Content }}
+{{ define "main" }}
+    {{ partial "header" . }}
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    {{ range where .Data.Pages "Title" "Home" }}
+                        <div class="markdown">
+                            {{ partial "content" . }}
+                        </div>
+                    {{ end }}
+
+                    {{ if .Site.Params.best_posts }}
+                        <div class="mx-0 mx-md-4 best-posts">
+                            <div class="page-heading">📌 Pinned</div>
+                            <ul>
+                                {{ range .Site.Params.best_posts }}
+                                    <li>
+                                        <a href="{{ .url }}">{{ .title }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    {{ end }}
+
+                    {{ if isset .Site.Params "latestpostcount" }}
+                        <div class="mx-0 mx-md-4 posts">
+                            {{ $nbPosts := len (where .Data.Pages "Section" "blog") }}
+                            {{ if gt $nbPosts 0 }}
+                                <div class="page-heading">Latest posts</div>
+                                <ul class="px-0">
+                                    {{ range (first .Site.Params.latestpostcount (where .Pages "Section" "blog")).GroupByDate "Jan, 2006" "desc" }}
+                                        <li class="groupby">{{ .Key }}</li>
+                                        {{ range sort .Pages "Date" "desc" }}
+                                            {{ partial "list" . }}
+                                        {{ end }}
+                                    {{ end }}
+                                </ul>
+
+                                {{ if gt $nbPosts .Site.Params.latestpostcount }}
+                                    <a href="./blog/" class="font-italic mt-4 see-more">See more ...</a>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    {{ end }}
                 </div>
-            {{ end }}
-
-            {{ if isset .Site.Params "latestpostcount" }}
-                <div class="posts">
-                {{ $nbPosts := len (where .Data.Pages "Section" "blog") }}
-                {{ if gt $nbPosts 0 }}
-                    <div class="page-heading">Latest posts</div>
-                    <ul>
-                    {{ range (first .Site.Params.latestpostcount (where .Pages "Section" "blog")).GroupByDate "Jan, 2006" "desc" }}
-                        <li class="groupby">{{ .Key }}</li>
-                        {{ range sort .Pages "Date" "desc" }}
-                            {{ partial "li.html" . }}
-                        {{ end }}
-                    {{ end }}
-                    </ul>
-
-                    {{ if gt $nbPosts .Site.Params.latestpostcount }}
-                        <a href="./blog/" class="see-more">See more ...</a>
-                    {{ end }}
-                {{ end }}
-                </div>
-            {{ end }}
-
-            <div class="best-posts">
-            {{ $nbPosts := len (where .Data.Pages "Params.best" true) }}
-            {{ if gt $nbPosts 0 }}
-                <div class="page-heading">Best posts</div>
-                <ul>
-                {{ range sort .Data.Pages "Date" "desc" }}
-                    {{ if eq .Params.best true }}
-                        {{ partial "li.html" . }}
-                    {{ end }}
-                {{ end }}
-                </ul>
-            {{ end }}
             </div>
         </div>
     </div>
-</div>
-{{ partial "footer.html" . }}
+
+    {{ partial "footer" . }}
+{{ end }}

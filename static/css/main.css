@@ -1,0 +1,245 @@
+/* Global styles */
+body {
+    font-family: "Raleway";
+}
+
+a {
+    color: #428bca;
+    transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+
+a:hover {
+    color: #2a6496;
+}
+
+/* Partial: Colors */
+.text-patreon {
+    color: rgb(249, 104, 84) !important;
+}
+
+.text-ko-fi {
+    color: #df5000 !important;
+}
+
+/* Partial: Header */
+.header a:hover {
+    text-decoration: none;
+}
+
+.header .logo {
+    max-height: 120px;
+}
+
+.header h1.name {
+    color: #333333;
+    font-size: 2.3rem;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.header ul.nav li a {
+    color: #666666;
+    font-size: 14px;
+    padding: 3px 5px 0 5px;
+}
+
+.header ul.nav li:first-child a {
+    padding-left: 2px;
+}
+
+.header ul.nav li:last-child a {
+    padding-right: 2px;
+}
+
+/* Partial: Content */
+.content .page-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.005rem;
+    text-transform: "capitalize";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.content .meta {
+    font-size: 14px;
+    color: #666666;
+}
+
+.content .meta a {
+    text-decoration: none;
+}
+
+.content .middot:before {
+    font-size: 6px;
+    margin: 0 6px;
+    vertical-align: middle;
+    content: "•";
+}
+
+.content .tags ul li {
+    transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+
+.content .tags ul li:hover {
+    opacity: 0.7;
+}
+
+.content .tags ul li a {
+    color: #666666;
+}
+
+.content .markdown {
+    font-family: "Merriweather";
+    font-size: 1.1em;
+    line-height: 1.75em;
+    color: #313537;
+}
+
+.content twitterwidget {
+    margin: auto;
+}
+
+.content .meta,
+.content .markdown h1,
+.content .markdown h2,
+.content .markdown h3,
+.content .markdown h4,
+.content .markdown h5,
+.content .markdown h6,
+.content .markdown p,
+.content .markdown ul,
+.content .markdown ol {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.content .markdown code,
+.content .markdown pre {
+    font-family: "Menlo", monospace;
+    font-size: 0.98rem;
+    background-color: #f7f7f7;
+}
+
+.content .markdown code {
+    /* enclosed by single backtick (`) */
+    padding: 0.15em 0.5em;
+    border-radius: 2px;
+}
+
+.content .markdown pre {
+    /* Hugo specific: consider using the 'highlight' shortcode */
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    line-height: 1.5em;
+    white-space: pre;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.content .markdown pre code {
+    /* enclosed by 4 backticks (````) */
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.content .markdown figure {
+    background: #fff;
+}
+
+.content .see-more {
+    font-size: 0.9em;
+    color: #313537;
+}
+
+.content .see-more:hover {
+    color: #666;
+}
+
+.content .groupby {
+    list-style: none;
+    margin-top: 1em;
+}
+
+.content .post-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+}
+
+.content .post-item .meta {
+    color: #666666;
+    display: block;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+.content .navigation .icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Partial: Footer */
+.footer a {
+    font-size: 14px;
+    margin-left: 6px;
+    margin-right: 6px;
+    opacity: 0.6;
+    transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+
+.footer a:first-child {
+    margin-left: 0;
+}
+
+.footer a:last-child {
+    margin-right: 0;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
+.footer a .icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    html {
+        font-size: .8rem;
+    }
+
+    .content .meta,
+    .content .markdown h1,
+    .content .markdown h2,
+    .content .markdown h3,
+    .content .markdown h4,
+    .content .markdown h5,
+    .content .markdown h6,
+    .content .markdown p,
+    .content .markdown ul,
+    .content .markdown ol {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
