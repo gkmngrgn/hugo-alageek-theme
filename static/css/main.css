@@ -155,6 +155,17 @@ a:hover {
     font-size: 0.9rem;
 }
 
+.content .markdown blockquote {
+    padding: 0.5rem .5rem;
+    margin: 0.8rem 1.5rem;
+    color: #7a7a7a;
+    border-left: 0.25rem solid #e5e5e5;
+}
+
+.content .markdown blockquote p:last-child {
+    margin-bottom: 0;
+}
+
 .content .markdown figure {
     background: #fff;
 }
@@ -226,7 +237,7 @@ a:hover {
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     html {
-        font-size: .8rem;
+        font-size: 0.8rem;
     }
 
     .content .meta,
