@@ -12,7 +12,7 @@
                     {{ end }}
 
                     {{ if .Site.Params.best_posts }}
-                        <div class="best-posts">
+                        <div class="mx-0 mx-md-4 best-posts">
                             <div class="page-heading">📌 Pinned</div>
                             <ul>
                                 {{ range .Site.Params.best_posts }}
@@ -25,7 +25,7 @@
                     {{ end }}
 
                     {{ if isset .Site.Params "latestpostcount" }}
-                        <div class="posts">
+                        <div class="mx-0 mx-md-4 posts">
                             {{ $nbPosts := len (where .Data.Pages "Section" "blog") }}
                             {{ if gt $nbPosts 0 }}
                                 <div class="page-heading">Latest posts</div>

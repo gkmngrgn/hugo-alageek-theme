@@ -7,45 +7,45 @@
                 <div class="col-sm-12 col-md-10">
                     <h1 class="mx-0 mx-md-4">{{ .Title }}</h1>
 
-                    <div class="meta">
-                        <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">
+                    <div class="mb-4 mb-md-5 meta">
+                        <span class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">
                             {{ .Date.Format .Site.Params.dateform }}
-                        </div>
+                        </span>
 
                         {{ if not .Params.noauthor }}
                             {{ if .Params.author }}
-                                <div class="author middot" title="{{ .Params.Author }}">
+                                <span class="author middot" title="{{ .Params.Author }}">
                                     {{ .Params.author }}
-                                </div>
+                                </span>
                             {{ end }}
                         {{ end }}
 
-                        <div class="reading-time middot">
+                        <span class="reading-time middot">
                             {{ .ReadingTime }} minute read
-                        </div>
+                        </span>
 
-                        <div class="d-none d-md-block tags">
-                            <ul class="list-unstyled">
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
                                 {{ range .Params.tags }}
-                                    <li class="middot">
+                                    <li class="d-inline middot">
                                         <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                                     </li>
                                 {{ end }}
                             </ul>
                         </div>
 
-                        <div class="tags">
-                            <ul>
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
                                 {{ if isset .Params "hacker_news_id" }}
                                     {{ if ne .Params.hacker_news_id "" }}
-                                        <li class="middot">
+                                        <li class="d-inline middot">
                                             <a href="https://news.ycombinator.com/item?id={{ .Params.hacker_news_id }}">Hacker News</a>
                                         </li>
                                     {{ end }}
                                 {{ end }}
                                 {{ if isset .Params "lobsters_id" }}
                                     {{ if ne .Params.lobsters_id "" }}
-                                        <li class="middot">
+                                        <li class="d-inline middot">
                                             <a href="https://lobste.rs/s/{{ .Params.lobsters_id }}">Lobsters</a>
                                         </li>
                                     {{ end }}
@@ -63,7 +63,7 @@
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     {{ if .PrevInSection }}
-                                        <div class="mt-4 text-left">
+                                        <div class="mx-0 mx-md-4 mt-4 text-left">
                                             <img class="icon" src="/img/back.svg" alt="back" />
                                             <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
                                         </div>
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="col-12 col-md-6">
                                     {{ if .NextInSection }}
-                                        <div class="mt-4 text-right">
+                                        <div class="mx-0 mx-md-4 mt-4 text-right">
                                             <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a>
                                             <img class="icon" src="/img/next.svg" alt="next" />
                                         </div>

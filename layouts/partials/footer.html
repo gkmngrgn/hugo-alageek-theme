@@ -1,9 +1,9 @@
-<div class="mt-4 mb-4 footer">
+<div class="my-4 footer">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-5">
                 {{ if .Site.Params.copyright }}
-                    <div class="text-left">
+                    <div class="mx-0 mx-md-4 text-left">
                         {{ if .Site.Params.copyrightUrl }}
                             <a href="{{ .Site.Params.copyrightUrl }}">{{ .Site.Params.copyright }}</a>
                         {{ else }}
@@ -13,7 +13,7 @@
                 {{ end }}
             </div>
             <div class="col-sm-12 col-md-5">
-                <div class="text-right">
+                <div class="mx-0 mx-md-4 text-right">
                     {{ if .Site.Params._500px }}
                         <a href="https://500px.com/{{ .Site.Params._500px }}" target="_blank">
                             <img class="icon" src="{{ .Site.BaseURL }}img/500px.svg" alt="500px" />
@@ -61,7 +61,6 @@
                             <img class="icon" src="{{ .Site.BaseURL }}img/rss.svg" alt="rss" />
                         </a>
                     {{ end }}
-
                 </div>
             </div>
         </div>

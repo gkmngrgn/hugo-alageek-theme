@@ -1,19 +1,23 @@
 {{ define "main" }}
     {{ partial "header" . }}
 
-    <div class="main column">
+    <div class="content">
         <div class="container">
-            <div class="content">
-                <div class="posts">
-                    <div class="page-heading">Blog</div>
-                    <ul>
-                        {{ range .Data.Pages.GroupByDate "Jan, 2006" "desc"}}
-                            <li class="groupby">{{ .Key }}</li>
-                            {{ range sort .Pages "Date" "desc" }}
-                                {{ partial "list" . }}
-                            {{ end }}
-                        {{ end }}
-                    </ul>
+            <div class="mx-0 mx-md-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-10">
+                        <div class="posts">
+                            <h1>Blog posts</h1>
+                            <ul class="list-unstyled">
+                                {{ range .Data.Pages.GroupByDate "Jan, 2006" "desc"}}
+                                    <li class="groupby">{{ .Key }}</li>
+                                    {{ range sort .Pages "Date" "desc" }}
+                                        {{ partial "list" . }}
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

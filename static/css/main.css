@@ -132,7 +132,7 @@ a:hover {
 .header ul.nav li a {
     color: #666666;
     font-size: 14px;
-    padding: 3px 5px;
+    padding: 3px 5px 0 5px;
 }
 
 .header ul.nav li:first-child a {
@@ -158,11 +158,10 @@ a:hover {
 .content .meta {
     font-size: 14px;
     color: #666666;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
+}
+
+.content .meta a {
+    text-decoration: none;
 }
 
 .content .middot:before {
@@ -170,22 +169,6 @@ a:hover {
     margin: 0 6px;
     vertical-align: middle;
     content: "•";
-}
-
-.content .tags ul {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
 }
 
 .content .tags ul li {
@@ -212,6 +195,10 @@ a:hover {
     font-weight: 300;
 }
 
+.content twitterwidget {
+    margin: auto;
+}
+
 .content .meta,
 .content .markdown h1,
 .content .markdown h2,
@@ -221,7 +208,7 @@ a:hover {
 .content .markdown h6,
 .content .markdown p,
 .content .markdown ul,
-.content .markdown li {
+.content .markdown ol {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
@@ -336,7 +323,7 @@ a:hover {
     .content .markdown h6,
     .content .markdown p,
     .content .markdown ul,
-    .content .markdown li {
+    .content .markdown ol {
         margin-left: 0;
         margin-right: 0;
     }
