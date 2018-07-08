@@ -120,6 +120,7 @@ a:hover {
 .content .markdown p,
 .content .markdown ul,
 .content .markdown ol,
+.content .markdown dl,
 .content .markdown blockquote {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -252,6 +253,7 @@ a:hover {
     .content .markdown p,
     .content .markdown ul,
     .content .markdown ol,
+    .content .markdown dl,
     .content .markdown blockquote {
         margin-left: 0;
         margin-right: 0;
