@@ -13,7 +13,7 @@
                         <h1>Sections</h1>
                         <ul>
                             {{ range sort .Pages "Title" "asc" }}
-                                <li class="post-item">
+                                <li>
                                     <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
                                 </li>
                             {{ end }}
