@@ -18,11 +18,15 @@ a:hover {
 
 /* Partial: Colors */
 .text-patreon {
-    color: rgb(249, 104, 84) !important;
+    color: #F96854 !important;
 }
 
 .text-ko-fi {
-    color: #df5000 !important;
+    color: #DF5000 !important;
+}
+
+.text-bmc {
+    color: #FF813F !important;
 }
 
 /* Partial: Header */
