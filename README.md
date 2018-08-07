@@ -3,14 +3,13 @@
 # hugo-alageek-theme
 A [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) based theme. It's rewritten with **Bootstrap 4**.
 
-<a href="https://www.patreon.com/gkmngrgn" title="Donate to this project using Patreon">
-    <img src="https://img.shields.io/badge/patreon-donate-yellowgreen.svg?longCache=true&style=for-the-badge"
-         alt="Patreon donate button" />
-</a>
+<a href="https://www.patreon.com/bePatron?u=10637849" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+<script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
-<a href="https://ko-fi.com/gokmen" title="Buy me a coffee!">
-    <img src="https://img.shields.io/badge/ko--fi-buy%20me%20a%20coffee-%236f4e37.svg?longCache=true&style=for-the-badge"
-         alt="Ko-fi donate button" />
+<a href="https://www.buymeacoffee.com/gokmen" target="_blank">
+    <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
+         alt="Buy Me A Coffee"
+         style="height: auto !important;width: auto !important;" >
 </a>
 
 Websites that are using hugo with alaGeek theme:
