@@ -222,6 +222,7 @@ a:hover {
     -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+    text-decoration: none;
 }
 
 .footer a:first-child {
@@ -239,6 +240,11 @@ a:hover {
 .footer a .icon {
     width: 16px;
     height: 16px;
+}
+
+.footer span.title {
+    font-size: 14px;
+    color: #666;
 }
 
 /* Small devices (landscape phones, less than 768px) */

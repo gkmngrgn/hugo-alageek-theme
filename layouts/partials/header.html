@@ -8,7 +8,7 @@
                     </a>
                 {{ end }}
             </div>
-            <div class="col-auto align-self-center">
+            <div class="col-auto align-self-center mr-auto">
                 <a href="{{ .Site.BaseURL }}">
                     <h1 class="font-weight-bold name">{{ .Site.Title }}</h1>
                 </a>
@@ -20,6 +20,20 @@
                                 {{ .Pre }}
                                 {{ .Name }}
                             </a>
+                        </li>
+                    {{ end }}
+
+                    {{ if .IsTranslated }}
+                        <li class="ml-4">
+                            <ul class="nav nav-languages">
+                                {{ range .Translations }}
+                                    <li>
+                                        <a class="nav-link" href="{{ .Permalink }}">
+                                            <strong>{{ upper .Language }}</strong>
+                                        </a>
+                                    </li>
+                                {{ end }}
+                            </ul>
                         </li>
                     {{ end }}
                 </ul>

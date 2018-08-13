@@ -5,11 +5,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
-                    {{ range where .Data.Pages "Title" "Home" }}
-                        <div class="markdown">
-                            {{ partial "content" . }}
-                        </div>
-                    {{ end }}
+                    <div class="markdown">
+                        {{ partial "content" . }}
+                    </div>
 
                     {{ if .Site.Params.best_posts }}
                         <div class="mx-0 mx-md-4 best-posts">

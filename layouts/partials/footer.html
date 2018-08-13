@@ -57,9 +57,18 @@
                     {{ end }}
 
                     {{ if .Site.RSSLink }}
-                        <a href="{{ .Site.RSSLink }}">
+                        <a href="{{ .Site.RSSLink }}" class="mr-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/rss.svg" alt="rss" />
                         </a>
+                    {{ end }}
+
+                    {{ if .IsTranslated }}
+                        <br />
+                        {{ range .Translations }}
+                            <a href="{{ .Permalink }}">
+                                <strong>{{ upper .Language.LanguageName }}</strong>
+                            </a>
+                        {{ end }}
                     {{ end }}
                 </div>
             </div>
