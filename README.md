@@ -1,4 +1,4 @@
-![](https://alageek.com/img/alaGeek-logo.png)
+![](https://alageek.com/img/alageek-logo.png)
 
 # hugo-alageek-theme
 A [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) based theme. It's rewritten with **Bootstrap 4**.
