@@ -9,7 +9,7 @@
                         {{ partial "content" . }}
                     </div>
 
-                    {{ if .Site.Params.best_posts }}
+                    {{ if isset .Site.Params "best_posts" }}
                         <div class="mx-0 mx-md-4 best-posts">
                             <div class="page-heading">📌 {{ i18n "pinned" }}</div>
                             <ul>
