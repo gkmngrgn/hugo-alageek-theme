@@ -36,12 +36,12 @@ Websites that are using hugo with alaGeek theme:
 
 ## Dependency versions
 
-* bootstrap: 4.1.1
+* bootstrap: 4.1.3
 * highlightjs: 9.12.0
 * jquery-slim: 3.3.1
-* mathjax: 2.7.4
-* popperjs: 1.14.3
+* mathjax: 2.7.5
 * progressively: 1.2.5
+* webfont: 1.6.28
 
 ## Typography
 
