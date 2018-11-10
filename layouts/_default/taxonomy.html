@@ -1,16 +1,18 @@
 {{ define "main" }}
     {{ partial "header" . }}
 
-    <div class="main column">
+    <div class="content">
         <div class="container">
-            <div class="content">
-                <div class="posts">
-                    <div class="page-heading">{{ i18n "posts_about" . }}</div>
-                    <ul>
-                        {{ range .Data.Pages.ByPublishDate }}
-                            {{ partial "list" . }}
-                        {{ end }}
-                    </ul>
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <div class="markdown">
+                        <h1>{{ i18n "posts_about" . }}</h1>
+                        <ul>
+                            {{ range .Data.Pages.ByPublishDate }}
+                                {{ partial "list" . }}
+                            {{ end }}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
