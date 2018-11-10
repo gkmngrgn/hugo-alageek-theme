@@ -10,7 +10,7 @@
                     </div>
 
                     <div class="mx-0 mx-md-4 posts">
-                        <h1>Blog posts</h1>
+                        <h1>{{ i18n "blog_posts" }}</h1>
                         <ul class="list-unstyled">
                             {{ range .Data.Pages.GroupByDate "Jan, 2006" "desc"}}
                                 <li class="groupby">{{ .Key }}</li>

@@ -26,7 +26,7 @@
                         <div class="mx-0 mx-md-4 posts">
                             {{ $nbPosts := len (where .Data.Pages "Section" "blog") }}
                             {{ if gt $nbPosts 0 }}
-                                <div class="page-heading">Latest posts</div>
+                                <div class="page-heading">{{ i18n "latest_posts" }}</div>
                                 <ul class="px-0">
                                     {{ range (first .Site.Params.latestpostcount (where .Pages "Section" "blog")).GroupByDate "Jan, 2006" "desc" }}
                                         <li class="groupby">{{ .Key }}</li>

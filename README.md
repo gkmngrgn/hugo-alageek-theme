@@ -29,10 +29,14 @@ Websites that are using hugo with alaGeek theme:
 * LaTeX support with MathJax.
 * Possibility to add extra scripts with `footer_extra.html`.
 
+## Supported Languages
+
+* English (Default)
+* Turkish
+
 ## TODO
 
 * Printer friendly output
-* Multilingual support
 
 ## Dependency versions
 

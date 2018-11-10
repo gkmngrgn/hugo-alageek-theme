@@ -5,7 +5,7 @@
         <div class="container">
             <div class="content">
                 <div class="posts">
-                    <div class="page-heading">Posts about {{ .Title }}</div>
+                    <div class="page-heading">{{ i18n "posts_about" . }}</div>
                     <ul>
                         {{ range .Data.Pages.ByPublishDate }}
                             {{ partial "list" . }}
