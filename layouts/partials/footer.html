@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-5">
                 {{ if .Site.Params.copyright }}
-                    <div class="mx-0 mx-md-4 text-left">
+                    <div class="mx-0 mx-md-4 mb-2 text-center text-md-left">
                         {{ if .Site.Params.copyrightUrl }}
                             <a href="{{ .Site.Params.copyrightUrl }}">{{ .Site.Params.copyright }}</a>
                         {{ else }}
@@ -13,51 +13,51 @@
                 {{ end }}
             </div>
             <div class="col-sm-12 col-md-5">
-                <div class="mx-0 mx-md-4 text-right">
+                <div class="mx-0 mx-md-4 text-center text-md-right">
                     {{ if .Site.Params._500px }}
-                        <a href="https://500px.com/{{ .Site.Params._500px }}" target="_blank">
+                        <a href="https://500px.com/{{ .Site.Params._500px }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/500px.svg" alt="500px" />
                         </a>
                     {{ end }}
 
                     {{ if .Site.Params.gitlab }}
-                        <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank">
+                        <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/gitlab.svg" alt="gitlab" />
                         </a>
                     {{ end }}
 
                     {{ if .Site.Params.facebook }}
-                        <a href="https://facebook.com/{{ .Site.Params.facebook }}" target="_blank">
+                        <a href="https://facebook.com/{{ .Site.Params.facebook }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/facebook.svg" alt="facebook" />
                         </a>
                     {{ end }}
 
                     {{ if .Site.Params.github }}
-                        <a href="https://github.com/{{ .Site.Params.github }}" target="_blank">
+                        <a href="https://github.com/{{ .Site.Params.github }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/github.svg" alt="github" />
                         </a>
                     {{ end }}
 
                     {{ if .Site.Params.twitter }}
-                        <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank">
+                        <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/twitter.svg" alt="twitter" />
                         </a>
                     {{ end }}
 
                     {{ if .Site.Params.linkedin }}
-                        <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank">
+                        <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/linkedin.svg" alt="linkedin" />
                         </a>
                     {{ end }}
 
                     {{ if .Site.Params.email }}
-                        <a href="mailto:{{ .Site.Params.email }}">
+                        <a href="mailto:{{ .Site.Params.email }}" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/email.svg" alt="email" />
                         </a>
                     {{ end }}
 
                     {{ if .Site.RSSLink }}
-                        <a href="{{ .Site.RSSLink }}" class="mr-0">
+                        <a href="{{ .Site.RSSLink }}" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/rss.svg" alt="rss" />
                         </a>
                     {{ end }}
@@ -65,7 +65,7 @@
                     {{ if .IsTranslated }}
                         <br />
                         {{ range .Translations }}
-                            <a href="{{ .Permalink }}">
+                            <a href="{{ .Permalink }}" class="mx-1 my-2 ml-md-2 mr-md-0">
                                 <strong>{{ upper .Language.LanguageName }}</strong>
                             </a>
                         {{ end }}

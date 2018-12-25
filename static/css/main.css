@@ -214,9 +214,8 @@ a:hover {
 /* Partial: Footer */
 .footer a {
     font-size: 14px;
-    margin-left: 6px;
-    margin-right: 6px;
     opacity: 0.6;
+    display: inline-block;
     transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
