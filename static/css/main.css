@@ -130,6 +130,10 @@ a:hover {
     margin-right: 21px;
 }
 
+.content .markdown p + p {
+  text-indent: 1.5rem;
+}
+
 .content .markdown code,
 .content .markdown pre {
     font-family: "Menlo", monospace;
