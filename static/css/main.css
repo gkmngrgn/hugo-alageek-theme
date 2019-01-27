@@ -115,19 +115,19 @@ a:hover {
 }
 
 .content .meta,
-.content .markdown h1,
-.content .markdown h2,
-.content .markdown h3,
-.content .markdown h4,
-.content .markdown h5,
-.content .markdown h6,
-.content .markdown p,
-.content .markdown ul,
-.content .markdown ol,
-.content .markdown dl,
-.content .markdown blockquote {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+.content .markdown > h1,
+.content .markdown > h2,
+.content .markdown > h3,
+.content .markdown > h4,
+.content .markdown > h5,
+.content .markdown > h6,
+.content .markdown > p,
+.content .markdown > ul,
+.content .markdown > ol,
+.content .markdown > dl,
+.content .markdown > blockquote {
+    margin-left: 21px;
+    margin-right: 21px;
 }
 
 .content .markdown code,
@@ -253,17 +253,17 @@ a:hover {
     }
 
     .content .meta,
-    .content .markdown h1,
-    .content .markdown h2,
-    .content .markdown h3,
-    .content .markdown h4,
-    .content .markdown h5,
-    .content .markdown h6,
-    .content .markdown p,
-    .content .markdown ul,
-    .content .markdown ol,
-    .content .markdown dl,
-    .content .markdown blockquote {
+    .content .markdown > h1,
+    .content .markdown > h2,
+    .content .markdown > h3,
+    .content .markdown > h4,
+    .content .markdown > h5,
+    .content .markdown > h6,
+    .content .markdown > p,
+    .content .markdown > ul,
+    .content .markdown > ol,
+    .content .markdown > dl,
+    .content .markdown > blockquote {
         margin-left: 0;
         margin-right: 0;
     }
