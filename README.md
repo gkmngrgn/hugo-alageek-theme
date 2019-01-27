@@ -22,6 +22,7 @@ Websites that are using hugo with alaGeek theme:
 
 * Possibility to have sections with a header and a list of articles.
 * Possibility to have single pages.
+* Possibility to add a Twitter, Mastodon, Facebook, 500px, GitHub, GitLab, Flattr, and Linkedin accounts to the footer.
 * Homepage with latest and best posts.
 * Syntax highlighting with `hightlightjs`.
 * Progressive images.

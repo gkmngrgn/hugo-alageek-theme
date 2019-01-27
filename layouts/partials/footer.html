@@ -44,6 +44,12 @@
                         </a>
                     {{ end }}
 
+                    {{ if .Site.Params.mastodon_url }}
+                        <a rel="me" href="{{ .Site.Params.mastodon_url }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/mastodon.svg" alt="mastodon" />
+                        </a>
+                    {{ end }}
+
                     {{ if .Site.Params.linkedin }}
                         <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/linkedin.svg" alt="linkedin" />
