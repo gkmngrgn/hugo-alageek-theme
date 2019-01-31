@@ -50,6 +50,12 @@
                         </a>
                     {{ end }}
 
+                    {{ if .Site.Params.telegram }}
+                        <a href="https://t.me/{{ .Site.Params.telegram }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
+                            <img class="icon" src="{{ .Site.BaseURL }}img/telegram.svg" alt="telegram" />
+                        </a>
+                    {{ end }}
+
                     {{ if .Site.Params.linkedin }}
                         <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
                             <img class="icon" src="{{ .Site.BaseURL }}img/linkedin.svg" alt="linkedin" />
