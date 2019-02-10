@@ -28,8 +28,9 @@
                             <ul class="nav nav-languages">
                                 {{ range .Translations }}
                                     <li>
-                                        <a class="nav-link" href="{{ .Permalink }}">
-                                            <strong>{{ upper .Language }}</strong>
+                                        <a class="nav-link" href="{{ .Permalink }}" alt="{{ .Language.LanguageName }}" title="{{ .Language.LanguageName }}">
+                                            <strong class="d-none d-md-inline">{{ upper .Language.LanguageName }}</strong>
+                                            <strong class="d-visible d-sm-none">{{ upper .Language }}</strong>
                                         </a>
                                     </li>
                                 {{ end }}

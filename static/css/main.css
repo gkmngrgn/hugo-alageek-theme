@@ -51,6 +51,10 @@ a:hover {
     padding: 3px 5px 0 5px;
 }
 
+.header ul.nav li a:hover {
+    text-decoration: underline;
+}
+
 .header ul.nav li:first-child a {
     padding-left: 2px;
 }
