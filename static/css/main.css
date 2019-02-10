@@ -35,6 +35,7 @@ a:hover {
 }
 
 .header .logo {
+    margin-left: 21px;  /* same with markdown left */
     max-height: 120px;
 }
 
