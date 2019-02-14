@@ -80,6 +80,12 @@
                             </div>
                         </div>
                     {{ end }}
+
+                    {{ if .Site.DisqusShortname }}
+                        <div class="mt-5 disqus">
+                            {{ template "_internal/disqus.html" . }}
+                        </div>
+                    {{ end }}
                 </div>
             </div>
         </div>

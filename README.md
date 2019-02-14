@@ -29,6 +29,7 @@ Websites that are using hugo with alaGeek theme:
 * Twitter cards support.
 * LaTeX support with MathJax.
 * Possibility to add extra scripts with `footer_extra.html`.
+* Disqus support.
 
 ## Supported Languages
 
