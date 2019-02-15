@@ -35,7 +35,7 @@ a:hover {
 }
 
 .header .logo {
-    margin-left: 21px;  /* same with markdown left */
+    margin-left: 1.5rem;
     max-height: 120px;
 }
 
@@ -131,8 +131,8 @@ a:hover {
 .content .markdown > ol,
 .content .markdown > dl,
 .content .markdown > blockquote {
-    margin-left: 21px;
-    margin-right: 21px;
+    margin-left: 1.5rem;  /* equal to mx-md-4 in bootstrap */
+    margin-right: 1.5rem;
 }
 
 .content .markdown p + p {
