@@ -41,3 +41,9 @@ identifier = "bmc"
 name = "Buy me a coffee"
 url = "https://www.buymeacoffee.com/gokmen"
 weight = 120
+
+[[menu.footer]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 50

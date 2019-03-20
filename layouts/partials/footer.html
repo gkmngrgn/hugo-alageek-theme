@@ -2,15 +2,24 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-5">
-                {{ if .Site.Params.copyright }}
-                    <div class="mx-0 mx-md-4 mb-2 text-center text-md-left">
+                <div class="mx-0 mx-md-4 mb-2 text-center text-md-left">
+                    {{ range .Site.Menus.footer.ByWeight }}
+                        <div>
+                            <a class="mx-1 mr-md-2 ml-md-0 {{ if .Identifier }} text-{{ .Identifier }}{{ end }}" href="{{ .URL }}">
+                                {{ .Pre }}
+                                {{ .Name }}
+                            </a>
+                        </div>
+                    {{ end }}
+
+                    {{ if .Site.Params.copyright }}
                         {{ if .Site.Params.copyrightUrl }}
                             <a href="{{ .Site.Params.copyrightUrl }}">{{ .Site.Params.copyright }}</a>
                         {{ else }}
                             <a href="{{ .Site.BaseURL }}license">{{ .Site.Params.copyright }}</a>
                         {{ end }}
-                    </div>
-                {{ end }}
+                    {{ end }}
+                </div>
             </div>
             <div class="col-sm-12 col-md-5">
                 <div class="mx-0 mx-md-4 text-center text-md-right">
@@ -75,12 +84,13 @@
                     {{ end }}
 
                     {{ if .IsTranslated }}
-                        <br />
-                        {{ range .Translations }}
-                            <a href="{{ .Permalink }}" class="mx-1 my-2 ml-md-2 mr-md-0">
-                                <strong>{{ upper .Language.LanguageName }}</strong>
-                            </a>
-                        {{ end }}
+                        <div>
+                            {{ range .Translations }}
+                                <a href="{{ .Permalink }}" class="mx-1 ml-md-2 mr-md-0">
+                                    <strong>{{ upper .Language.LanguageName }}</strong>
+                                </a>
+                            {{ end }}
+                        </div>
                     {{ end }}
                 </div>
             </div>
