@@ -1,0 +1,19 @@
+blog_posts:
+  other: "Publicacions Blòg"
+latest_posts:
+  other: "Darrièras publicacions"
+page_not_found_description:
+  other: "La pagina que cercatz existís pas."
+page_not_found_link:
+  other: "Anar a l’acuèlh"
+pinned:
+  other: "Penjat"
+posts_about:
+  other: "Publicacions tocant {{ .Title }}"
+reading_time:
+  one: "{{ .Count }} minuta"
+  other: "{{ .Count }} minutas"
+sections:
+  other: "Seccions"
+see-more:
+  other: "Ne veire mai..."
