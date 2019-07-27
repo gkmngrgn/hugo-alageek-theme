@@ -18,15 +18,15 @@ a:hover {
 
 /* Partial: Colors */
 .text-patreon {
-    color: #F96854 !important;
+    color: #f96854 !important;
 }
 
 .text-ko-fi {
-    color: #DF5000 !important;
+    color: #df5000 !important;
 }
 
 .text-bmc {
-    color: #FF813F !important;
+    color: #ff813f !important;
 }
 
 /* Partial: Header */
@@ -131,12 +131,12 @@ a:hover {
 .content .markdown > ol,
 .content .markdown > dl,
 .content .markdown > blockquote {
-    margin-left: 1.5rem;  /* equal to mx-md-4 in bootstrap */
+    margin-left: 1.5rem; /* equal to mx-md-4 in bootstrap */
     margin-right: 1.5rem;
 }
 
 .content .markdown p + p {
-  text-indent: 1.5rem;
+    text-indent: 1.5rem;
 }
 
 .content .markdown code,
@@ -275,5 +275,24 @@ a:hover {
     .content .markdown > blockquote {
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #efefef;
+    }
+
+    .content .markdown {
+        color: #e0e0e0;
+    }
+
+    .header h1.name {
+        color: #efefef;
+    }
+
+    .header ul.nav li a {
+        color: #eaeaea;
     }
 }
