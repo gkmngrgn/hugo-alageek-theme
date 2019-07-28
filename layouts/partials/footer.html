@@ -23,65 +23,16 @@
             </div>
             <div class="col-sm-12 col-md-5">
                 <div class="mx-0 mx-md-4 text-center text-md-right">
-                    {{ if .Site.Params._500px }}
-                        <a href="https://500px.com/{{ .Site.Params._500px }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/500px.svg" alt="500px" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.Params.gitlab }}
-                        <a href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/gitlab.svg" alt="gitlab" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.Params.facebook }}
-                        <a href="https://facebook.com/{{ .Site.Params.facebook }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/facebook.svg" alt="facebook" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.Params.github }}
-                        <a href="https://github.com/{{ .Site.Params.github }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/github.svg" alt="github" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.Params.twitter }}
-                        <a href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/twitter.svg" alt="twitter" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.Params.mastodon_url }}
-                        <a rel="me" href="{{ .Site.Params.mastodon_url }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/mastodon.svg" alt="mastodon" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.Params.telegram }}
-                        <a href="https://t.me/{{ .Site.Params.telegram }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/telegram.svg" alt="telegram" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.Params.linkedin }}
-                        <a href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" target="_blank" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/linkedin.svg" alt="linkedin" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.Params.email }}
-                        <a href="mailto:{{ .Site.Params.email }}" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/email.svg" alt="email" />
-                        </a>
-                    {{ end }}
-
-                    {{ if .Site.RSSLink }}
-                        <a href="{{ .Site.RSSLink }}" class="mx-1 ml-md-2 mr-md-0">
-                            <img class="icon" src="{{ .Site.BaseURL }}img/rss.svg" alt="rss" />
-                        </a>
-                    {{ end }}
+                    {{ partial "footer_500px" . }}
+                    {{ partial "footer_gitlab" . }}
+                    {{ partial "footer_github" . }}
+                    {{ partial "footer_facebook" . }}
+                    {{ partial "footer_twitter" . }}
+                    {{ partial "footer_mastodon" . }}
+                    {{ partial "footer_telegram" . }}
+                    {{ partial "footer_linkedin" . }}
+                    {{ partial "footer_email" . }}
+                    {{ partial "footer_rss" . }}
 
                     {{ if .IsTranslated }}
                         <div>

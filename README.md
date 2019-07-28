@@ -8,11 +8,6 @@ A [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) based theme. It's 
          alt="Patreon donate button" />
 </a>
 
-<a href="https://www.buymeacoffee.com/gokmen" title="Buy me a coffee!">
-    <img src="https://img.shields.io/badge/buy%20me%20a%20coffee-%23FF813F.svg?longCache=true&style=for-the-badge"
-         alt="BMC donate button" />
-</a>
-
 Websites that are using hugo with alaGeek theme:
 
 * https://alageek.com
@@ -30,11 +25,13 @@ Websites that are using hugo with alaGeek theme:
 * LaTeX support with MathJax.
 * Possibility to add extra scripts with `footer_extra.html`.
 * Disqus support.
+* Dark-mode support.
 
 ## Supported Languages
 
 * English (Default)
 * Turkish
+* Catalan
 
 ## TODO
 
@@ -42,8 +39,8 @@ Websites that are using hugo with alaGeek theme:
 
 ## Dependency versions
 
-* bootstrap: 4.1.3
-* highlightjs: 9.12.0
+* bootstrap: 4.3.1
+* highlightjs: 9.15.8
 * jquery-slim: 3.3.1
 * mathjax: 2.7.5
 * progressively: 1.2.5

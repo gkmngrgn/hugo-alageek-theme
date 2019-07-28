@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
 
     {{ if .Site.Params.highlightjs }}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css" />
     {{ end }}
 
     {{ if .Site.Params.progressively }}
@@ -73,9 +73,9 @@
     </script>
 
     {{ if .Site.Params.highlightjs }}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js" integrity="sha256-js+I1fdbke/DJrW2qXQlrw7VUEqmdeFeOW37UC0bEiU=" crossorigin="anonymous"></script>
         {{ range .Site.Params.highlightjslanguages }}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{.}}.min.js" defer></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/languages/{{.}}.min.js" defer></script>
         {{ end }}
         <script>
             window.addEventListener('load', function() {
