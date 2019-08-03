@@ -6,7 +6,13 @@
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
                     <div class="markdown">
-                        <h1 class="mx-0 mx-md-4">{{ .Title }}</h1>
+                        <h1 class="mx-0 mx-md-4">
+                            {{ if eq .Title "Tags" }}
+                                {{ i18n "title_tags" . }}
+                            {{ else }}
+                                {{ .Title }}
+                            {{ end }}
+                        </h1>
 
                         <p class="h4">
                             {{ $data := .Data }}

@@ -1,19 +1,21 @@
 blog_posts:
-  other: "Publicacions Blòg"
+    other: "Publicacions Blòg"
 latest_posts:
-  other: "Darrièras publicacions"
+    other: "Darrièras publicacions"
 page_not_found_description:
-  other: "La pagina que cercatz existís pas."
+    other: "La pagina que cercatz existís pas."
 page_not_found_link:
-  other: "Anar a l’acuèlh"
+    other: "Anar a l’acuèlh"
 pinned:
-  other: "Penjat"
+    other: "Penjat"
 posts_about:
-  other: "Publicacions tocant {{ .Title }}"
+    other: "Publicacions tocant {{ .Title }}"
 reading_time:
-  one: "{{ .Count }} minuta"
-  other: "{{ .Count }} minutas"
+    one: "{{ .Count }} minuta"
+    other: "{{ .Count }} minutas"
 sections:
-  other: "Seccions"
-see-more:
-  other: "Ne veire mai..."
+    other: "Seccions"
+see_more:
+    other: "Ne veire mai..."
+title_tags:
+    other: "Tags"
