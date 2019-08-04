@@ -3,9 +3,9 @@ license = "MIT"
 licenselink = "https://github.com/gkmngrgn/hugo-alageek-theme/blob/master/LICENSE.md"
 description = "alaGeek website specific theme."
 homepage = "https://alageek.com"
-tags = ["clean", "fast", "responsive", "typography"]
-features = ["flexible", "fast", "highlights", "progressive images"]
-min_version = 0.40.3
+tags = ["clean", "fast", "responsive", "typography", "disqus", "light", "dark", "syntax-highlighting"]
+features = ["clean", "fast", "responsive", "typography", "disqus", "light", "dark", "syntax-highlighting"]
+min_version = "0.40"
 
 [author]
   name = "Gökmen Görgen"

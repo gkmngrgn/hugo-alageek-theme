@@ -1,32 +1,72 @@
+:root {
+    --main-bg-color: #fff;
+    --main-font-color: #313537;
+    --main-link-color: #0011ff;
+    --header-font-color: #333333;
+    --header-link-color: #666666;
+    --footer-link-color: #313537;
+
+    --color-patreon: #dc3545;
+    --color-ko-fi: #dc3545;
+    --color-bmc: #dc3545;
+
+    --font-title: "Raleway", sans-serif;
+    --font-code: "Menlo", monospace;
+    --font-content: "Merriweather", serif;
+}
+
+.badge-info {
+    background-color: #20c997;
+    color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #1a1a1a;
+        --main-font-color: #f8f9fa;
+        --main-link-color: #17bf63;
+        --header-font-color: #efefef;
+        --header-link-color: #eaeaea;
+        --footer-link-color: #aaa;
+
+        --color-patreon: #f96854;
+        --color-ko-fi: #df5000;
+        --color-bmc: #ff813f;
+    }
+}
+
 /* Global styles */
 body {
-    font-family: "Raleway";
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+    font-family: var(--font-content);
 }
 
-a {
-    color: #428bca;
-    transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-}
-
+a,
 a:hover {
-    color: #2a6496;
+    color: var(--main-link-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-title);
 }
 
 /* Partial: Colors */
 .text-patreon {
-    color: #f96854 !important;
+    color: var(--color-patreon) !important;
 }
 
 .text-ko-fi {
-    color: #df5000 !important;
+    color: var(--color-ko-fi) !important;
 }
 
 .text-bmc {
-    color: #ff813f !important;
+    color: var(--color-bmc) !important;
 }
 
 /* Partial: Header */
@@ -40,14 +80,14 @@ a:hover {
 }
 
 .header h1.name {
-    color: #333333;
+    color: var(--header-font-color);
     font-size: 2.3rem;
-    font-family: "Helvetica Neue", "Arial", sans-serif;
     letter-spacing: 0.1rem;
 }
 
 .header ul.nav li a {
-    color: #666666;
+    color: var(--header-link-color);
+    font-family: var(--font-title);
     font-size: 14px;
     padding: 3px 5px 0 5px;
 }
@@ -68,17 +108,19 @@ a:hover {
 .content .page-heading {
     font-size: 1.5rem;
     font-weight: 700;
+    font-family: var(--font-title);
     letter-spacing: -0.005rem;
     text-transform: "capitalize";
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    color: #333333;
+    color: var(--header-font-color);
     margin-bottom: 16px;
 }
 
 .content .meta {
     font-size: 14px;
-    color: #666666;
+    color: var(--header-link-color);
+    font-family: var(--font-title);
 }
 
 .content .meta a {
@@ -92,27 +134,13 @@ a:hover {
     content: "•";
 }
 
-.content .tags ul li {
-    transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-}
-
 .content .tags ul li:hover {
-    opacity: 0.7;
-}
-
-.content .tags ul li a {
-    color: #666666;
+    opacity: 0.8;
 }
 
 .content .markdown {
-    font-family: "Merriweather";
     font-size: 1.1em;
     line-height: 1.75em;
-    color: #313537;
 }
 
 .content twitterwidget {
@@ -135,13 +163,17 @@ a:hover {
     margin-right: 1.5rem;
 }
 
+.content .markdown figure {
+    background: var(--main-bg-color);
+}
+
 .content .markdown p + p {
     text-indent: 1.5rem;
 }
 
 .content .markdown code,
 .content .markdown pre {
-    font-family: "Menlo", monospace;
+    font-family: var(--font-code);
     font-size: 0.98rem;
 }
 
@@ -163,34 +195,25 @@ a:hover {
 }
 
 .content .markdown pre code {
-    /* enclosed by 4 backticks (````) */
     padding: 0;
-    font-size: 0.9rem;
 }
 
 .content .markdown blockquote {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
-    color: #7a7a7a;
-    border-left: 0.25rem solid #e5e5e5;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    border-left: 0.25rem solid var(--main-font-color);
 }
 
 .content .markdown blockquote p:last-child {
     margin-bottom: 0;
 }
 
-.content .markdown figure {
-    background: #fff;
-}
-
 .content .see-more {
     font-size: 0.9em;
-    color: #313537;
-}
-
-.content .see-more:hover {
-    color: #666;
+    color: var(--footer-link-color);
 }
 
 .content .groupby {
@@ -207,7 +230,7 @@ a:hover {
 }
 
 .content .post-item .meta {
-    color: #666666;
+    opacity: 0.9;
     display: block;
     font-size: 14px;
     min-width: 100px;
@@ -221,13 +244,7 @@ a:hover {
 /* Partial: Footer */
 .footer a {
     font-size: 14px;
-    opacity: 0.6;
     display: inline-block;
-    transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-    -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
     text-decoration: none;
 }
 
@@ -244,13 +261,13 @@ a:hover {
 }
 
 .footer a.icon {
+    fill: currentColor;
     width: 16px;
     height: 16px;
 }
 
 .footer span.title {
     font-size: 14px;
-    color: #666;
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -273,45 +290,5 @@ a:hover {
     .content .markdown > blockquote {
         margin-left: 0;
         margin-right: 0;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1a1a1a;
-        color: #efefef;
-    }
-
-    a,
-    a:hover {
-        color: #17bf63;
-    }
-
-    .content .markdown {
-        color: #e0e0e0;
-    }
-
-    .header h1.name {
-        color: #efefef;
-    }
-
-    .header ul.nav li a {
-        color: #eaeaea;
-    }
-
-    .content .page-heading {
-        color: #efefef;
-    }
-
-    .content .see-more {
-        color: #aaa;
-    }
-
-    .content .see-more:hover {
-        color: #aaa;
-    }
-
-    .footer a.icon {
-        fill: currentColor;
     }
 }

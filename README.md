@@ -15,17 +15,25 @@ Websites that are using hugo with alaGeek theme:
 
 ## Features
 
-* Possibility to have sections with a header and a list of articles.
-* Possibility to have single pages.
-* Possibility to add a Twitter, Mastodon, Facebook, 500px, GitHub, GitLab, Flattr, and Linkedin accounts to the footer.
+* Social media links on the footer:
+    - 500px
+    - Facebook
+    - Flattr
+    - GitHub
+    - GitLab
+    - Linkedin
+    - Mastodon
+    - Twitter
 * Homepage with latest and best posts.
-* Syntax highlighting with `hightlightjs`.
-* Progressive images.
-* Twitter cards support.
-* LaTeX support with MathJax.
-* Possibility to add extra scripts with `footer_extra.html`.
-* Disqus support.
-* Dark-mode support.
+* Single pages, sections with a header and a list of articles
+* Syntax highlighting with `hightlightjs`
+* Progressive images
+* Twitter cards support
+* LaTeX support with MathJax
+* Possibility to add extra scripts with `footer_extra.html`
+* Disqus support
+* Dark-mode support
+* High accessibility score
 
 ## Supported Languages
 
