@@ -236,9 +236,19 @@ h6 {
     min-width: 100px;
 }
 
+.content .navigation .icon,
+.content .navigation .text {
+    height: 24px;
+}
+
 .content .navigation .icon {
+    display: inline-block;
+    fill: currentColor;
     width: 16px;
-    height: 16px;
+}
+
+.content .navigation .text {
+    vertical-align: middle;
 }
 
 /* Partial: Footer */

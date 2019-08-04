@@ -64,16 +64,20 @@
                                 <div class="col-12 col-md-6">
                                     {{ if .PrevInSection }}
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <img class="icon" src="/img/back.svg" alt="back" />
-                                            <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
+                                            <a href="{{ .PrevInSection.Permalink }}">
+                                                {{ partial "icon_back" . }}
+                                                <span class="text">{{ .PrevInSection.Title }}</span>
+                                            </a>
                                         </div>
                                     {{ end }}
                                 </div>
                                 <div class="col-12 col-md-6">
                                     {{ if .NextInSection }}
                                         <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}</a>
-                                            <img class="icon" src="/img/next.svg" alt="next" />
+                                            <a href="{{ .NextInSection.Permalink }}">
+                                                <span class="text">{{ .NextInSection.Title }}</span>
+                                                {{ partial "icon_next" . }}
+                                            </a>
                                         </div>
                                     {{ end }}
                                 </div>
