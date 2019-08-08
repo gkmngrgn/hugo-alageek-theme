@@ -47,9 +47,8 @@
     <link rel="shortcut icon"
         href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile | absURL }}{{ else }}{{ .Site.BaseURL }}img/favicon.ico{{ end }}">
 
-    {{ if .RSSLink }}
-        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
+
+    <link href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
     <noscript>
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">

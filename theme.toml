@@ -5,7 +5,7 @@ description = "alaGeek website specific theme."
 homepage = "https://alageek.com"
 tags = ["clean", "fast", "responsive", "typography", "disqus", "light", "dark", "syntax-highlighting"]
 features = ["clean", "fast", "responsive", "typography", "disqus", "light", "dark", "syntax-highlighting"]
-min_version = "0.40"
+min_version = "0.40.0"
 
 [author]
   name = "Gökmen Görgen"
