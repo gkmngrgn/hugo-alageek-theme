@@ -1,0 +1,21 @@
+blog_posts:
+    other: "Postări"
+latest_posts:
+    other: "Cele mai recente"
+page_not_found_description:
+    other: "Pagina pe care o cauți nu există"
+page_not_found_link:
+    other: "Vizitează pagina principală"
+pinned:
+    other: "Importante"
+posts_about:
+    other: "Articole despre {{ .Title }}"
+reading_time:
+    one: "{{ .Count }} minut"
+    other: "{{ .Count }} minute"
+sections:
+    other: "Secțiuni"
+see_more:
+    other: "Detalii..."
+title_tags:
+    other: "Tag-uri"
