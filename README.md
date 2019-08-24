@@ -37,9 +37,10 @@ Websites that are using hugo with alaGeek theme:
 
 ## Supported Languages
 
-* English (Default)
-* Turkish
 * Catalan
+* English (Default)
+* Romanian
+* Turkish
 
 ## TODO
 
