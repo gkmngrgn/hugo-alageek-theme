@@ -147,6 +147,16 @@ h6 {
     margin: auto;
 }
 
+.content .markdown > h1,
+.content .markdown > h2,
+.content .markdown > h3,
+.content .markdown > h4,
+.content .markdown > h5,
+.content .markdown > h6 {
+    margin-top: 3rem;
+    margin-bottom: .75rem;
+}
+
 .content .meta,
 .content .markdown > h1,
 .content .markdown > h2,
@@ -165,10 +175,6 @@ h6 {
 
 .content .markdown figure {
     background: var(--main-bg-color);
-}
-
-.content .markdown p + p {
-    text-indent: 1.5rem;
 }
 
 .content .markdown code,
