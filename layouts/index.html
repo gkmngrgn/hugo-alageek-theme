@@ -24,11 +24,12 @@
 
                     {{ if isset .Site.Params "latestpostcount" }}
                         <div class="mx-0 mx-md-4 posts">
-                            {{ $nbPosts := len (where .Data.Pages "Section" "blog") }}
+                            {{ $nbPosts := len (where .Site.RegularPages "Section" "blog") }}
+
                             {{ if gt $nbPosts 0 }}
                                 <div class="page-heading">{{ i18n "latest_posts" }}</div>
                                 <ul class="px-0">
-                                    {{ range (first .Site.Params.latestpostcount (where .Pages "Section" "blog")).GroupByDate "Jan, 2006" "desc" }}
+                                    {{ range (first .Site.Params.latestpostcount (where .Site.RegularPages "Section" "blog")).GroupByDate "Jan, 2006" "desc" }}
                                         <li class="groupby">{{ .Key }}</li>
                                         {{ range sort .Pages "Date" "desc" }}
                                             {{ partial "list" . }}
