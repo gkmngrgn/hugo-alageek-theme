@@ -11,14 +11,17 @@
 
                     <div class="mx-0 mx-md-4 posts">
                         <h1>{{ i18n "blog_posts" }}</h1>
-                        <ul class="list-unstyled">
-                            {{ range .Data.Pages.GroupByDate "Jan, 2006" "desc"}}
+
+                        <ul class="mb-5 list-unstyled">
+                            {{ range (.Paginate (.Pages.GroupByDate "Jan, 2006" "desc")).PageGroups }}
                                 <li class="groupby">{{ .Key }}</li>
                                 {{ range sort .Pages "Date" "desc" }}
                                     {{ partial "list" . }}
                                 {{ end }}
                             {{ end }}
                         </ul>
+
+                        {{ template "_internal/pagination.html" . }}
                     </div>
                 </div>
             </div>

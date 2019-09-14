@@ -36,6 +36,7 @@ Websites that are using hugo with alaGeek theme:
 * Disqus support
 * Dark-mode support
 * High accessibility score
+* Pagination support in blog posts
 
 ## Supported Languages
 

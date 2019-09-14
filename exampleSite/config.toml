@@ -2,7 +2,7 @@ author = "Gökmen Görgen"
 baseurl = "/"
 canonifyurls = true
 copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
-paginate = 3
+paginate = 5
 theme = "alageek"
 title = "alaGeek Theme"
 

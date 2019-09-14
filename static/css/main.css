@@ -5,6 +5,7 @@
     --header-font-color: #333333;
     --header-link-color: #666666;
     --footer-link-color: #313537;
+    --pagination-border-color: #dee2e6;
 
     --color-patreon: #dc3545;
     --color-ko-fi: #dc3545;
@@ -28,6 +29,7 @@
         --header-font-color: #efefef;
         --header-link-color: #eaeaea;
         --footer-link-color: #aaa;
+        --pagination-border-color: #222222;
 
         --color-patreon: #f96854;
         --color-ko-fi: #df5000;
@@ -67,6 +69,26 @@ h6 {
 
 .text-bmc {
     color: var(--color-bmc) !important;
+}
+
+.pagination .page-item .page-link {
+    background-color: var(--main-bg-color);
+    border-color: var(--pagination-border-color);
+    color: var(--main-link-color);
+}
+
+.pagination .page-item .page-link:focus {
+    box-shadow: 0 0 0 .2rem var(--pagination-border-color);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--main-link-color);
+    border-color: var(--main-link-color);
+    color: var(--main-bg-color);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: var(--main-font-color);
 }
 
 /* Partial: Header */
