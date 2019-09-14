@@ -13,6 +13,18 @@ faviconfile = "https://gokmengorgen.net/img/laughing-man-favicon.png"
 latestpostcount = 5
 logofile = "https://gokmengorgen.net/img/laughing-man.png"
 highlightjs = true
+description = "Hugo alaGeek Theme"
+highlightjslanguages = [ "bash", "css", "diff", "django", "javascript", "python", "yaml" ]
+posts_navigation = true
+progressively = true
+flattr = "?"
+github = "?"
+gitlab = "?"
+linkedin = "?"
+telegram = "?"
+twitter = "?"
+mastodon_url = "https://mastodon.url/?"
+email = "?@localhost"
 
 [[params.best_posts]]
 title = "Migrate to Hugo from Jekyll"
