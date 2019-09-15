@@ -1,7 +1,9 @@
+{{ $isTocEnabled := .Scratch.Get "isTocEnabled" }}
+
 <div class="my-4 my-md-5 header">
     <div class="container">
         <div class="row">
-            <div class="col-auto offset-md-1 d-none d-md-block">
+            <div class="col-auto{{ if not $isTocEnabled }} offset-md-1{{ end }} d-none d-md-block">
                 {{ if .Site.Params.logofile }}
                     <a href="{{ .Site.BaseURL }}">
                         <img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo">
@@ -10,7 +12,9 @@
             </div>
             <div class="col-auto align-self-center mr-auto">
                 <a href="{{ .Site.BaseURL }}">
-                    <h1 class="font-weight-bold name">{{ .Site.Title }}</h1>
+                    <h1 class="font-weight-bold name">
+                        {{ .Site.Title }}
+                    </h1>
                 </a>
 
                 <ul class="nav nav-primary">

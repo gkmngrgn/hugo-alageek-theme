@@ -91,6 +91,25 @@ h6 {
     color: var(--main-font-color);
 }
 
+#TableOfContents ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#TableOfContents ul li {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+#TableOfContents ul:first-child > li {
+    padding-left: 0;
+}
+
+#TableOfContents ul:first-child > li:first-child {
+    margin-top: 0;
+}
+
 /* Partial: Header */
 .header a:hover {
     text-decoration: none;
@@ -161,6 +180,7 @@ h6 {
 }
 
 .content .markdown {
+    position: relative;
     font-size: 1.1em;
     line-height: 1.75em;
 }

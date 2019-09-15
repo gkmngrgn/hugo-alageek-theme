@@ -9,12 +9,13 @@ title = "alaGeek Theme"
 [params]
 copyright = "© 2018 by Gökmen Görgen"
 copyrightUrl = "https://gokmengorgen.net"
+description = "Hugo alaGeek Theme"
 faviconfile = "https://gokmengorgen.net/img/laughing-man-favicon.png"
 latestpostcount = 5
 logofile = "https://gokmengorgen.net/img/laughing-man.png"
 highlightjs = true
-description = "Hugo alaGeek Theme"
 highlightjslanguages = [ "bash", "css", "diff", "django", "javascript", "python", "yaml" ]
+toc = true
 posts_navigation = true
 progressively = true
 flattr = "?"
