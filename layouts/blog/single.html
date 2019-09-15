@@ -66,21 +66,14 @@
                         </div>
                     </div>
 
-                    <div
-                        class="markdown"
-                        {{ if $isTocEnabled }}
-                        data-spy="scroll"
-                        data-target="#TableOfContents"
-                        data-offset="100"
-                        {{ end }}
-                    >
+                    <div class="markdown">
                         {{ partial "content" . }}
                     </div>
                 </div>
 
                 {{ if $isTocEnabled }}
                     <div class="col-sm-12 col-md-3">
-                        {{ .TableOfContents }}
+                        {{ replace .TableOfContents "id=\"TableOfContents\"" "id=\"TableOfContents\" class=\"sticky-top\"" | safeHTML }}
                     </div>
                 {{ end }}
             </div>

@@ -110,6 +110,11 @@ h6 {
     margin-top: 0;
 }
 
+#TableOfContents ul li a {
+    padding: 1rem 0;
+    font-size: .9rem;
+}
+
 /* Partial: Header */
 .header a:hover {
     text-decoration: none;
