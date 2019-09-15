@@ -76,7 +76,23 @@
                     >
                         {{ partial "content" . }}
                     </div>
+                </div>
 
+                {{ if $isTocEnabled }}
+                    <div class="col-sm-12 col-md-3">
+                        {{ .TableOfContents }}
+                    </div>
+                {{ end }}
+            </div>
+
+            <div class="row{{ if not $isTocEnabled }} justify-content-center{{ end }}">
+                <div
+                    {{ if $isTocEnabled }}
+                    class="col-sm-12 col-md-9"
+                    {{ else }}
+                    class="col-sm-12 col-md-10"
+                    {{ end }}
+                >
                     {{ if .Site.Params.posts_navigation }}
                         <div class="navigation">
                             <div class="row">
@@ -110,12 +126,6 @@
                         </div>
                     {{ end }}
                 </div>
-
-                {{ if $isTocEnabled }}
-                    <div class="col-sm-12 col-md-3">
-                        {{ .TableOfContents }}
-                    </div>
-                {{ end }}
             </div>
         </div>
     </div>
