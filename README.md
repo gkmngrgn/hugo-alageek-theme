@@ -1,14 +1,7 @@
-![](https://alageek.com/img/alageek-logo.png)
-
 # hugo-alageek-theme
 A [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) based theme. It's rewritten with **Bootstrap 4**.
 
 ![](/images/screenshot.png)
-
-<a href="https://www.patreon.com/gkmngrgn" title="Donate to this project using Patreon">
-    <img src="https://img.shields.io/badge/become%20a%20patron-F96854.svg?longCache=true&style=for-the-badge"
-         alt="Patreon donate button" />
-</a>
 
 Websites that are using hugo with alaGeek theme:
 
