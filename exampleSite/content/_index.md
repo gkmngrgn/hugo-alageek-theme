@@ -4,8 +4,6 @@ date = "2014-04-09"
 menu = "main"
 +++
 
-![](https://alageek.com/img/alageek-logo.png)
-
 A **Cocoa Enhaced** based theme. It's rewritten with **Bootstrap 4**.
 
 Websites that are using hugo with alaGeek theme:
