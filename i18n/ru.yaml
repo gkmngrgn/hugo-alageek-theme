@@ -1,0 +1,21 @@
+blog_posts:
+    other: "Записи"
+latest_posts:
+    other: "Самые последние"
+page_not_found_description:
+    other: "Страница, которую вы ищете, не существует"
+page_not_found_link:
+    other: "Перейти на главную страницу"
+pinned:
+    other: "Прикрепленные"
+posts_about:
+    other: "Записи о {{ .Title }}"
+reading_time:
+    one: "{{ .Count }} минута"
+    other: "{{ .Count }} минуты"
+sections:
+    other: "Разделы"
+see_more:
+    other: "Больше..."
+title_tags:
+    other: "Теги"
