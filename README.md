@@ -37,6 +37,7 @@ Websites that are using hugo with alaGeek theme:
 * Catalan
 * English (Default)
 * Romanian
+* Russian
 * Turkish
 
 ## Dependency versions
