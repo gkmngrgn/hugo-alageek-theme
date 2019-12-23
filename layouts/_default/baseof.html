@@ -72,9 +72,9 @@
     </script>
 
     {{ if .Site.Params.highlightjs }}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js" integrity="sha256-js+I1fdbke/DJrW2qXQlrw7VUEqmdeFeOW37UC0bEiU=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
         {{ range .Site.Params.highlightjslanguages }}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/languages/{{.}}.min.js" defer></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/{{.}}.min.js" defer></script>
         {{ end }}
         <script>
             window.addEventListener('load', function() {
