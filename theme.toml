@@ -8,8 +8,8 @@ features = ["clean", "fast", "responsive", "typography", "disqus", "light", "dar
 min_version = "0.40.0"
 
 [author]
-  name = "Gökmen Görgen"
-  homepage = "https://gokmengorgen.net"
+    name = "Gökmen Görgen"
+    homepage = "https://gokmengorgen.net"
 
 [original]
     name = "Alexis Tacnet"

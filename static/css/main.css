@@ -11,9 +11,9 @@
     --color-ko-fi: #dc3545;
     --color-bmc: #dc3545;
 
-    --font-title: "Raleway", sans-serif;
-    --font-code: "Menlo", monospace;
+    --font-code: "Fira Code", monospace;
     --font-content: "Merriweather", serif;
+    --font-title: "Merriweather Sans", sans-serif;
 }
 
 .badge-info {

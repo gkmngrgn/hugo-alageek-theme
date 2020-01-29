@@ -42,18 +42,18 @@ Websites that are using hugo with alaGeek theme:
 
 ## Dependency versions
 
-* bootstrap: 4.3.1
-* highlightjs: 9.15.8
-* jquery-slim: 3.3.1
+* bootstrap: 4.4.1
+* highlightjs: 9.15.10
+* jquery-slim: 3.4.1
 * mathjax: 2.7.5
 * progressively: 1.2.5
-* webfont: 1.6.28
+* popper.js: 1.16.0
 
 ## Typography
 
-* *Raleway* for the titles, light but clearly visible
-* *Merriweather* for the text, an awesome sans serif font to read without difficulties
-* *Menlo* for the code
+* Title: Merriweather Sans
+* Content: Merriweather
+* Code: Fira Code
 
 ## License
 
