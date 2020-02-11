@@ -1,7 +1,7 @@
 <div class="my-4 footer">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-5">
+            <div class="col-sm-12 col-md-6 col-lg-5">
                 <div class="mx-0 mx-md-4 mb-2 text-center text-md-left">
                     {{ range .Site.Menus.footer.ByWeight }}
                         <div>
@@ -21,7 +21,7 @@
                     {{ end }}
                 </div>
             </div>
-            <div class="col-sm-12 col-md-5">
+            <div class="col-sm-12 col-md-6 col-lg-5">
                 <div class="mx-0 mx-md-4 text-center text-md-right">
                     {{ partial "footer_500px" . }}
                     {{ partial "footer_gitlab" . }}

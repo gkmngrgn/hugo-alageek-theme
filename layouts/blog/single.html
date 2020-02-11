@@ -10,9 +10,9 @@
             <div class="row justify-content-center">
                 <div
                     {{ if $isTocEnabled }}
-                    class="col-sm-12 col-md-9"
+                    class="col-md-9 col-lg-9"
                     {{ else }}
-                    class="col-sm-12 col-md-10"
+                    class="col-md-12 col-lg-10"
                     {{ end }}
                 >
                     <h1 class="mx-0 mx-md-4">
@@ -81,9 +81,9 @@
             <div class="row{{ if not $isTocEnabled }} justify-content-center{{ end }}">
                 <div
                     {{ if $isTocEnabled }}
-                    class="col-sm-12 col-md-9"
+                    class="col-md-9 col-lg-9"
                     {{ else }}
-                    class="col-sm-12 col-md-10"
+                    class="col-md-12 col-lg-10"
                     {{ end }}
                 >
                     {{ if .Site.Params.posts_navigation }}
