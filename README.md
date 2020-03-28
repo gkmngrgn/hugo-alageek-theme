@@ -55,6 +55,17 @@ Websites that are using hugo with alaGeek theme:
 * Content: Merriweather
 * Code: Fira Code
 
+## Updates
+
+### Goldmark Compatibility
+
+If you prefer to use Goldmark instead of Blackfriday for Markdown parser, you
+need to set `xhtml: true` for activating `progressively` extension. Also, you
+need to set `unsafe: true` if you use Bootstrap HTML components in Markdown
+files. Please take a look at [this
+documentation](https://gohugo.io/getting-started/configuration-markup/) for more
+information.
+
 ## License
 
 Licensed under the MIT License. See the LICENSE.md file for more details.
