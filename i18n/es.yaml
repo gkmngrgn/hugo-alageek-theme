@@ -1,0 +1,21 @@
+blog_posts:
+    other: "Blog posts"
+latest_posts:
+    other: "Últimos posts"
+page_not_found_description:
+    other: "La pagina que busca no existe."
+page_not_found_link:
+    other: "Volver a la página principal."
+pinned:
+    other: "Destacado"
+posts_about:
+    other: "Posts about {{ .Title }}"
+reading_time:
+    one: "{{ .Count }} minuto"
+    other: "{{ .Count }} minutos"
+sections:
+    other: "Sections"
+see_more:
+    other: "Ver más..."
+title_tags:
+    other: "Tags"
