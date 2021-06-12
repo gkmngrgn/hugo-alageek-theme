@@ -1,127 +1,127 @@
 {{ define "main" }}
-    {{ $isTocEnabled := or (.Params.toc) (and (.Site.Params.toc) (or (not (isset .Params "toc")) (.Params.toc))) }}
+  {{ $isTocEnabled := or (.Params.toc) (and (.Site.Params.toc) (or (not (isset .Params "toc")) (.Params.toc))) }}
 
-    {{ .Scratch.Set "isTocEnabled" $isTocEnabled }}
+  {{ .Scratch.Set "isTocEnabled" $isTocEnabled }}
 
-    {{ partial "header" . }}
+  {{ partial "header" . }}
 
-    <div class="content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div
-                    {{ if $isTocEnabled }}
-                    class="col-md-9 col-lg-9"
-                    {{ else }}
-                    class="col-md-12 col-lg-10"
-                    {{ end }}
-                >
-                    <h1 class="mx-0 mx-md-4">
-                        {{ .Title }}
-                    </h1>
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div
+            {{ if $isTocEnabled }}
+                class="col-md-9 col-lg-9"
+            {{ else }}
+                class="col-md-12 col-lg-10"
+            {{ end }}
+        >
+          <h1 class="mx-0 mx-md-4">
+            {{ .Title }}
+          </h1>
 
-                    <div class="mb-4 mb-md-5 meta">
-                        <span class="date" title='{{ .Date.Format "Mon Jan 2 2006 15:04:05 MST" }}'>
-                            {{ .Date.Format  "January 02, 2006" }}
-                        </span>
+          <div class="mb-4 mb-md-5 meta">
+            <span class="date" title='{{ .Date.Format "Mon Jan 2 2006 15:04:05 MST" }}'>
+              {{ .Date.Format  "January 02, 2006" }}
+            </span>
 
-                        {{ if not .Params.noauthor }}
-                            {{ if .Params.author }}
-                                <span class="author middot" title="{{ .Params.Author }}">
-                                    {{ .Params.author }}
-                                </span>
-                            {{ end }}
-                        {{ end }}
+            {{ if not .Params.noauthor }}
+              {{ if .Params.author }}
+                <span class="author middot" title="{{ .Params.Author }}">
+                  {{ .Params.author }}
+                </span>
+              {{ end }}
+            {{ end }}
 
-                        <span class="reading-time middot">
-                            {{ i18n "reading_time" .ReadingTime }}
-                        </span>
+            <span class="reading-time middot">
+              {{ i18n "reading_time" .ReadingTime }}
+            </span>
 
-                        <div class="d-none d-md-inline tags">
-                            <ul class="list-unstyled d-inline">
-                                {{ range .Params.tags }}
-                                    <li class="d-inline middot">
-                                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        </div>
-
-                        <div class="d-none d-md-inline tags">
-                            <ul class="list-unstyled d-inline">
-                                {{ if isset .Params "hacker_news_id" }}
-                                    {{ if ne .Params.hacker_news_id "" }}
-                                        <li class="d-inline middot">
-                                            <a href="https://news.ycombinator.com/item?id={{ .Params.hacker_news_id }}">Hacker News</a>
-                                        </li>
-                                    {{ end }}
-                                {{ end }}
-                                {{ if isset .Params "lobsters_id" }}
-                                    {{ if ne .Params.lobsters_id "" }}
-                                        <li class="d-inline middot">
-                                            <a href="https://lobste.rs/s/{{ .Params.lobsters_id }}">Lobsters</a>
-                                        </li>
-                                    {{ end }}
-                                {{ end }}
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="markdown">
-                        {{ partial "content" . }}
-                    </div>
-                </div>
-
-                {{ if $isTocEnabled }}
-                    <div class="col-sm-12 col-md-3">
-                        {{ replace .TableOfContents "id=\"TableOfContents\"" "id=\"TableOfContents\" class=\"sticky-top\"" | safeHTML }}
-                    </div>
+            <div class="d-none d-md-inline tags">
+              <ul class="list-unstyled d-inline">
+                {{ range .Params.tags }}
+                  <li class="d-inline middot">
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                  </li>
                 {{ end }}
+              </ul>
             </div>
 
-            <div class="row{{ if not $isTocEnabled }} justify-content-center{{ end }}">
-                <div
-                    {{ if $isTocEnabled }}
-                    class="col-md-9 col-lg-9"
-                    {{ else }}
-                    class="col-md-12 col-lg-10"
-                    {{ end }}
-                >
-                    {{ if .Site.Params.posts_navigation }}
-                        <div class="navigation">
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    {{ if .PrevInSection }}
-                                        <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="{{ .PrevInSection.Permalink }}">
-                                                {{ partial "icon_back" . }}
-                                                <span class="text">{{ .PrevInSection.Title }}</span>
-                                            </a>
-                                        </div>
-                                    {{ end }}
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    {{ if .NextInSection }}
-                                        <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="{{ .NextInSection.Permalink }}">
-                                                <span class="text">{{ .NextInSection.Title }}</span>
-                                                {{ partial "icon_next" . }}
-                                            </a>
-                                        </div>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </div>
-                    {{ end }}
-
-                    {{ if .Site.DisqusShortname }}
-                        <div class="mt-5 mx-0 mx-md-4 disqus">
-                            {{ template "_internal/disqus.html" . }}
-                        </div>
-                    {{ end }}
-                </div>
+            <div class="d-none d-md-inline tags">
+              <ul class="list-unstyled d-inline">
+                {{ if isset .Params "hacker_news_id" }}
+                  {{ if ne .Params.hacker_news_id "" }}
+                    <li class="d-inline middot">
+                      <a href="https://news.ycombinator.com/item?id={{ .Params.hacker_news_id }}">Hacker News</a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+                {{ if isset .Params "lobsters_id" }}
+                  {{ if ne .Params.lobsters_id "" }}
+                    <li class="d-inline middot">
+                      <a href="https://lobste.rs/s/{{ .Params.lobsters_id }}">Lobsters</a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
             </div>
+          </div>
+
+          <div class="markdown">
+            {{ partial "content" . }}
+          </div>
         </div>
-    </div>
 
-    {{ partial "footer" . }}
+        {{ if $isTocEnabled }}
+          <div class="col-sm-12 col-md-3">
+            {{ replace .TableOfContents "id=\"TableOfContents\"" "id=\"TableOfContents\" class=\"sticky-top\"" | safeHTML }}
+          </div>
+        {{ end }}
+      </div>
+
+      <div class="row{{ if not $isTocEnabled }} justify-content-center{{ end }}">
+        <div
+            {{ if $isTocEnabled }}
+                class="col-md-9 col-lg-9"
+            {{ else }}
+                class="col-md-12 col-lg-10"
+            {{ end }}
+        >
+          {{ if .Site.Params.posts_navigation }}
+            <div class="navigation">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  {{ if .PrevInSection }}
+                    <div class="mx-0 mx-md-4 mt-4 text-start">
+                      <a href="{{ .PrevInSection.Permalink }}">
+                        {{ partial "icon_back" . }}
+                        <span class="text">{{ .PrevInSection.Title }}</span>
+                      </a>
+                    </div>
+                  {{ end }}
+                </div>
+                <div class="col-12 col-md-6">
+                  {{ if .NextInSection }}
+                    <div class="mx-0 mx-md-4 mt-4 text-end">
+                      <a href="{{ .NextInSection.Permalink }}">
+                        <span class="text">{{ .NextInSection.Title }}</span>
+                        {{ partial "icon_next" . }}
+                      </a>
+                    </div>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          {{ end }}
+
+          {{ if .Site.DisqusShortname }}
+            <div class="mt-5 mx-0 mx-md-4 disqus">
+              {{ template "_internal/disqus.html" . }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ partial "footer" . }}
 {{ end }}

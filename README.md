@@ -1,5 +1,5 @@
 # hugo-alageek-theme
-A [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) based theme. It's rewritten with **Bootstrap 4**.
+A [Cocoa Enhaced](https://github.com/mtn/cocoa-eh-hugo-theme) based theme. It's rewritten with **Bootstrap 5**.
 
 ![](/images/screenshot.png)
 
@@ -38,16 +38,15 @@ Websites that are using hugo with alaGeek theme:
 * English (Default)
 * Romanian
 * Russian
+* Spanish
 * Turkish
 
 ## Dependency versions
 
-* bootstrap: 4.4.1
-* highlightjs: 9.15.10
-* jquery-slim: 3.4.1
-* mathjax: 2.7.5
+* bootstrap: 5.0.1
+* highlightjs: 11.0.1
+* mathjax: ^3.0.0
 * progressively: 1.2.5
-* popper.js: 1.16.0
 
 ## Typography
 
