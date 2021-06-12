@@ -40,13 +40,7 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
 
     {{ if .Site.Params.highlightjs }}
-      <style>
-       @import url(https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/github.min.css);
-
-       @media (prefers-color-scheme: dark) {
-         @import url(https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/tomorrow-night-bright.min.css);
-       }
-      </style>
+      <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css" />
     {{ end }}
 
     {{ if .Site.Params.progressively }}
@@ -60,7 +54,7 @@
           href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile | absURL }}{{ else }}{{ .Site.BaseURL }}img/favicon.ico{{ end }}">
 
     <link href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="//fonts.googleapis.com/css?family=Fira+Code|Merriweather+Sans:400,700|Merriweather:400,700&display=swap" rel="stylesheet">
+    {{ partial "header_extra"  . }}
   </head>
 
   <body>

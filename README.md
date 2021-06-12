@@ -62,6 +62,9 @@ or keep your theme in the old version.
 
 ## Typography
 
+You can customize the fonts copying and editing `header_extra.html`
+file. The defaults are:
+
 * Title: Merriweather Sans
 * Content: Merriweather
 * Code: Fira Code
