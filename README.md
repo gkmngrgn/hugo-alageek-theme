@@ -14,7 +14,15 @@ Websites that are using hugo with alaGeek theme:
 
 If you have Bootstrap v4 specific customizations on your theme, please
 take a look at [this documentation](https://getbootstrap.com/docs/5.0/migration/)
-or keep your theme in the old version.
+or keep your theme in the old version v1.5.0.
+
+
+## How dark mode works?
+
+It automatically reads your system or browser color scheme and
+activates the dark or light mode. If you want to use dark mode in all
+cases, copy and move the `main.css` into your static folder keeping
+the path, remove light-mode specific colors.
 
 
 ## Features
