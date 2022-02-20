@@ -1,17 +1,17 @@
 name = "alaGeek"
 license = "MIT"
 licenselink = "https://github.com/gkmngrgn/hugo-alageek-theme/blob/master/LICENSE.md"
-description = "alaGeek website specific theme."
-homepage = "https://alageek.com"
+description = "A Cocoa Enhanced based theme. It's rewritten with Bootstrap 5."
+homepage = "https://git.gokmengorgen.net/goedev/hugo-alageek-theme"
 tags = ["clean", "fast", "responsive", "typography", "disqus", "light", "dark", "syntax-highlighting"]
 features = ["clean", "fast", "responsive", "typography", "disqus", "light", "dark", "syntax-highlighting"]
-min_version = "0.40.0"
+min_version = "0.41.0"
 
 [author]
-    name = "Gökmen Görgen"
-    homepage = "https://gokmengorgen.net"
+  name = "Gökmen Görgen"
+  homepage = "https://gokmengorgen.net"
 
 [original]
-    name = "Alexis Tacnet"
-    homepage = "https://fuegowolf.me/"
-    repo = "https://github.com/fuegowolf/cocoa-eh-hugo-theme"
+  name = "Alexis Tacnet"
+  homepage = "https://fuegowolf.me/"
+  repo = "https://github.com/fuegowolf/cocoa-eh-hugo-theme"

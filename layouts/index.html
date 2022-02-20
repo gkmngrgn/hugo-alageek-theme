@@ -1,6 +1,4 @@
 {{ define "main" }}
-  {{ partial "header" . }}
-
   <div class="content">
     <div class="container">
       <div class="row justify-content-center">
@@ -38,7 +36,9 @@
                 </ul>
 
                 {{ if gt $nbPosts .Site.Params.latestpostcount }}
-                  <a href="./blog/" class="font-italic mt-4 see-more">{{ i18n "see_more" }}</a>
+                  <a href="./blog/" class="font-italic mt-4 see-more">
+                    {{ i18n "see_more" }}
+                  </a>
                 {{ end }}
               {{ end }}
             </div>
@@ -47,6 +47,4 @@
       </div>
     </div>
   </div>
-
-  {{ partial "footer" . }}
 {{ end }}

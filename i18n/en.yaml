@@ -1,21 +1,21 @@
 blog_posts:
-    other: "Blog posts"
+  other: "Blog posts"
 latest_posts:
-    other: "Latest posts"
+  other: "Latest posts"
 page_not_found_description:
-    other: "The page you were looking for does not exist."
+  other: "The page you were looking for does not exist."
 page_not_found_link:
-    other: "Visit the home page"
+  other: "Visit the home page"
 pinned:
-    other: "Pinned"
+  other: "Pinned"
 posts_about:
-    other: "Posts about {{ .Title }}"
+  other: "Posts about {{ .Title }}"
 reading_time:
-    one: "{{ .Count }} minute"
-    other: "{{ .Count }} minutes"
+  one: "{{ .Count }} minute"
+  other: "{{ .Count }} minutes"
 sections:
-    other: "Sections"
+  other: "Sections"
 see_more:
-    other: "See more..."
+  other: "See more..."
 title_tags:
-    other: "Tags"
+  other: "Tags"

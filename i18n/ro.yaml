@@ -1,21 +1,21 @@
 blog_posts:
-    other: "Postări"
+  other: "Postări"
 latest_posts:
-    other: "Cele mai recente"
+  other: "Cele mai recente"
 page_not_found_description:
-    other: "Pagina pe care o cauți nu există"
+  other: "Pagina pe care o cauți nu există"
 page_not_found_link:
-    other: "Vizitează pagina principală"
+  other: "Vizitează pagina principală"
 pinned:
-    other: "Importante"
+  other: "Importante"
 posts_about:
-    other: "Articole despre {{ .Title }}"
+  other: "Articole despre {{ .Title }}"
 reading_time:
-    one: "{{ .Count }} minut"
-    other: "{{ .Count }} minute"
+  one: "{{ .Count }} minut"
+  other: "{{ .Count }} minute"
 sections:
-    other: "Secțiuni"
+  other: "Secțiuni"
 see_more:
-    other: "Detalii..."
+  other: "Detalii..."
 title_tags:
-    other: "Tag-uri"
+  other: "Tag-uri"

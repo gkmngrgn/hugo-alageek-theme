@@ -1,21 +1,21 @@
 blog_posts:
-    other: "Blog yazıları"
+  other: "Blog yazıları"
 latest_posts:
-    other: "Son yazılar"
+  other: "Son yazılar"
 page_not_found_description:
-    other: "Aradığınız sayfa bulunmuyor."
+  other: "Aradığınız sayfa bulunmuyor."
 page_not_found_link:
-    other: "Ana sayfaya git"
+  other: "Ana sayfaya git"
 pinned:
-    other: "Sabitlenmiş"
+  other: "Sabitlenmiş"
 posts_about:
-    other: "{{.Title}} ile ilgili yazılar"
+  other: "{{.Title}} ile ilgili yazılar"
 reading_time:
-    one: "{{ .Count }} dakika"
-    other: "{{ .Count }} dakika"
+  one: "{{ .Count }} dakika"
+  other: "{{ .Count }} dakika"
 sections:
-    other: "Bölümler"
+  other: "Bölümler"
 see_more:
-    other: "Daha fazlası..."
+  other: "Daha fazlası..."
 title_tags:
-    other: "Etiketler"
+  other: "Etiketler"

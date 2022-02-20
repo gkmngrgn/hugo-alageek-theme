@@ -1,0 +1,101 @@
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="referrer" content="no-referrer" />
+  <meta
+    name="description"
+    content="{{ .Description | default .Site.Params.description }}"
+  />
+
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:locale" content="nn_NO" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta
+    property="og:title"
+    content="{{ if .Title }}
+      {{ .Title }}
+    {{ else }}
+      {{ .Site.Title }}
+    {{ end }}"
+  />
+  <meta
+    property="og:image"
+    content="{{ .Site.BaseURL }}{{ .Params.meta_img | default .Site.Params.logofile }}"
+  />
+  <meta
+    property="og:description"
+    content="{{ .Description | default .Site.Params.description }}"
+  />
+
+  {{ if .Site.Params.twitter }}
+    <meta property="twitter:site" content="@{{ .Site.Params.twitter }}" />
+  {{ end }}
+
+
+  <meta property="twitter:title" content="{{ .Title | default .Site.Title }}" />
+  <meta
+    property="twitter:image"
+    content="{{ .Site.BaseURL }}{{ .Params.meta_img | default .Site.Params.logofile }}"
+  />
+  <meta property="twitter:card" content="summary" />
+  <meta
+    property="twitter:description"
+    content="{{ .Description | default .Site.Params.description }}"
+  />
+
+  {{ if .Site.Params.flattr }}
+    <meta name="flattr:id" content="{{ .Site.Params.flattr }}" />
+  {{ end }}
+
+
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  <link
+    href="//cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
+
+  {{ if .Site.Params.highlightjs }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css" />
+  {{ end }}
+
+  {{ if .Site.Params.progressively }}
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/progressively@1.2.5/dist/progressively.min.css"
+      integrity="sha256-xbqLYBMsjpuCihs+3Fgp/MFMtPdo2SWKoOjEWOqR4X0="
+      crossorigin="anonymous"
+    />
+  {{ end }}
+
+
+  <link
+    rel="shortcut icon"
+    href="{{ if .Site.Params.faviconfile }}
+      {{ .Site.Params.faviconfile | absURL }}
+    {{ else }}
+      {{ .Site.BaseURL }}img/favicon.ico
+    {{ end }}"
+  />
+
+  <link
+    href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"
+    rel="alternate"
+    type="application/rss+xml"
+    title="{{ .Site.Title }}"
+  />
+
+  {{ partial "head_extra" . }}
+</head>
