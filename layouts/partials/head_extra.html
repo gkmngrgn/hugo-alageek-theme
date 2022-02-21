@@ -1,12 +1,11 @@
-<link
-  href="//fonts.googleapis.com/css?family=Fira+Code|Merriweather+Sans:400,700|Merriweather:400,700&display=swap"
-  rel="stylesheet"
-/>
+{{- partial "style_bootstrap" . -}}
 
-<style>
-  :root {
-    --font-code: "Fira Code", monospace;
-    --font-content: "Merriweather", serif;
-    --font-title: "Merriweather Sans", sans-serif;
-  }
-</style>
+{{- partial "style_main" . -}}
+
+{{ if .Site.Params.highlightjs }}
+  {{- partial "style_highlight" . -}}
+{{ end }}
+
+{{ if .Site.Params.progressively }}
+  {{- partial "style_progressively" . -}}
+{{ end }}

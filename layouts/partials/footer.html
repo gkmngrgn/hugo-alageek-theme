@@ -6,7 +6,7 @@
           {{ range .Site.Menus.footer.ByWeight }}
             <div>
               <a
-                class="mx-1 mr-md-2 ml-md-0 {{ if .Identifier }}
+                class="mx-1 mr-md-2 ml-md-0{{ if .Identifier }}
                   text-{{ .Identifier }}
                 {{ end }}"
                 href="{{ .URL }}"
@@ -19,13 +19,13 @@
 
           {{ if .Site.Params.copyright }}
             {{ if .Site.Params.copyrightUrl }}
-              <a href="{{ .Site.Params.copyrightUrl }}"
-                >{{ .Site.Params.copyright }}</a
-              >
+              <a href="{{ .Site.Params.copyrightUrl }}">
+                {{ .Site.Params.copyright }}
+              </a>
             {{ else }}
-              <a href="{{ .Site.BaseURL }}license"
-                >{{ .Site.Params.copyright }}</a
-              >
+              <a href="{{ .Site.BaseURL }}license">
+                {{ .Site.Params.copyright }}
+              </a>
             {{ end }}
           {{ end }}
         </div>

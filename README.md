@@ -30,7 +30,7 @@ of the theme._
   - Twitter
 - Homepage with latest and best posts.
 - Single pages, sections with a header and a list of articles
-- Syntax highlighting with `hightlightjs`
+- Syntax highlighting with `highlightjs`
 - Progressive images
 - Twitter cards support
 - LaTeX support with MathJax
@@ -43,14 +43,14 @@ of the theme._
 
 ## DEPENDENCY VERSIONS
 
-- bootstrap: 5.0.1
-- highlightjs: 11.0.1
+- bootstrap: 5.1.3
+- highlightjs: 11.4.0
 - mathjax: ^3.0.0
-- progressively: 1.2.5
+- progressively: latest stable version
 
 ## TYPOGRAPHY
 
-You can customize the fonts copying and editing `head_extra.html`
+You can customize the fonts copying and editing `style_main.html`
 file. The defaults are:
 
 - Title: Merriweather Sans
@@ -73,6 +73,9 @@ file. The defaults are:
 - `icon_back.html` has been renamed `icon_prev.html`.
 - `header_extra.html` has been renamed `head_extra.html`.
 - HEAD tags have been moved to `head.html`.
+- All script lines have been moved to `footer_extra.html`.
+- `highlight.css` has been removed and a new partial template
+  `style_highlight.html` has been created.
 
 ### V2.0.0: NEW MARKDOWN PARSERS
 

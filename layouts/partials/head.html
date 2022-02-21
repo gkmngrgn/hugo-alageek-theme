@@ -58,37 +58,12 @@
 
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  <link
-    href="//cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-    crossorigin="anonymous"
-  />
-
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
-
-  {{ if .Site.Params.highlightjs }}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css" />
+  {{ if .Site.Params.faviconfile }}
+    <link rel="shortcut icon" href="{{ .Site.Params.faviconfile | absURL }}" />
+  {{ else }}
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon.ico" />
   {{ end }}
 
-  {{ if .Site.Params.progressively }}
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/progressively@1.2.5/dist/progressively.min.css"
-      integrity="sha256-xbqLYBMsjpuCihs+3Fgp/MFMtPdo2SWKoOjEWOqR4X0="
-      crossorigin="anonymous"
-    />
-  {{ end }}
-
-
-  <link
-    rel="shortcut icon"
-    href="{{ if .Site.Params.faviconfile }}
-      {{ .Site.Params.faviconfile | absURL }}
-    {{ else }}
-      {{ .Site.BaseURL }}img/favicon.ico
-    {{ end }}"
-  />
 
   <link
     href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}"
@@ -97,5 +72,5 @@
     title="{{ .Site.Title }}"
   />
 
-  {{ partial "head_extra" . }}
+  {{- partial "head_extra" . -}}
 </head>

@@ -1,0 +1,13 @@
+{{- partial "script_bootstrap" . -}}
+
+{{ if .Site.Params.highlightjs }}
+  {{- partial "script_highlight" . -}}
+{{ end }}
+
+{{ if .Site.Params.progressively }}
+  {{- partial "script_progressively" . -}}
+{{ end }}
+
+{{ if .Site.Params.uselatex }}
+  {{- partial "script_latex" . -}}
+{{ end }}
