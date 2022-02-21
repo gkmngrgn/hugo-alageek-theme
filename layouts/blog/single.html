@@ -89,7 +89,9 @@
         {{ end }}
       </div>
 
-      <div class="row{{ if not $isTocEnabled }}justify-content-center{{ end }}">
+      <div
+        class="row {{ if not $isTocEnabled }}justify-content-center{{ end }}"
+      >
         <div
           {{ if $isTocEnabled }}
             class="col-md-9 col-lg-9"
