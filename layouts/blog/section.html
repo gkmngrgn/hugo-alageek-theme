@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-10">
+          <div class="markdown">
+            {{ partial "content" . }}
+          </div>
+
+          <div class="mx-0 mx-md-4 posts">
+            <h1>{{ i18n "blog_posts" }}</h1>
+
+            <ul class="mb-5 list-unstyled">
+              {{ range (.Paginate (.Pages.GroupByDate "Jan, 2006" "desc")).PageGroups }}
+                <li class="groupby">{{ .Key }}</li>
+                {{ range sort .Pages "Date" "desc" }}
+                  {{ partial "list" . }}
+                {{ end }}
+              {{ end }}
+            </ul>
+
+            {{ template "_internal/pagination.html" . }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
