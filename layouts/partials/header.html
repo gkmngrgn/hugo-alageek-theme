@@ -1,84 +1,59 @@
 {{ $isTocEnabled := .Scratch.Get "isTocEnabled" }}
 
-
 <div class="my-4 my-md-5 header">
-  <div class="container">
-    <div class="row">
-      <div
-        class="col-auto{{ if not $isTocEnabled }}
-          offset-lg-1
-        {{ end }} d-none d-md-block"
-      >
-        {{ if .Site.Params.logofile }}
-          <a href="{{ .Site.BaseURL }}">
-            <img
-              class="logo"
-              src="{{ .Site.Params.logofile | absURL }}"
-              alt="logo"
-            />
-          </a>
-        {{ end }}
-      </div>
-      <div class="col-auto align-self-center mr-auto">
-        <a class="text-decoration-none" href="{{ .Site.Home.Permalink }}">
-          <h1 class="font-weight-bold name">{{ .Site.Title }}</h1>
-        </a>
-
-        <ul class="nav nav-primary">
-          {{ range .Site.Menus.primary.ByWeight }}
-            <li class="nav-item">
-              <a
-                class="text-uppercase nav-link{{ if .Identifier }}
-                  text-{{ .Identifier }}
-                {{ end }}"
-                href="{{ .URL }}"
-              >
-                {{ .Pre }}
-                {{ .Name }}
-              </a>
-            </li>
-          {{ end }}
-          {{ if .IsTranslated }}
-            <li class="ml-3">
-              <ul class="nav nav-languages">
-                {{ range .Translations }}
-                  <li>
-                    <a
-                      class="nav-link"
-                      href="{{ .Permalink }}"
-                      alt="{{ .Language.LanguageName }}"
-                      title="{{ .Language.LanguageName }}"
-                    >
-                      <strong class="d-none d-md-inline"
-                        >{{ upper .Language.LanguageName }}</strong
-                      >
-                      <strong class="d-visible d-sm-none"
-                        >{{ upper .Language }}</strong
-                      >
-                    </a>
-                  </li>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto{{ if not $isTocEnabled }} offset-lg-1{{ end }} d-none d-md-block">
+                {{ if .Site.Params.logofile }}
+                <a href="{{ .Site.BaseURL }}">
+                    <img class="logo" src="{{ .Site.Params.logofile | absURL }}" alt="logo" />
+                </a>
                 {{ end }}
-              </ul>
-            </li>
-          {{ end }}
-        </ul>
+            </div>
+            <div class="col-auto align-self-center mr-auto">
+                <a class="text-decoration-none" href="{{ .Site.Home.Permalink }}">
+                    <h1 class="font-weight-bold name">{{ .Site.Title }}</h1>
+                </a>
 
-        <ul class="nav nav-secondary">
-          {{ range .Site.Menus.secondary.ByWeight }}
-            <li class="nav-item">
-              <a
-                class="text-uppercase font-weight-bold nav-link{{ if .Identifier }}
-                  text-{{ .Identifier }}
-                {{ end }}"
-                href="{{ .URL }}"
-              >
-                {{ .Pre }}
-                {{ .Name }}
-              </a>
-            </li>
-          {{ end }}
-        </ul>
-      </div>
+                <ul class="nav nav-primary">
+                    {{ range .Site.Menus.primary.ByWeight }}
+                    <li class="nav-item">
+                        <a class="text-uppercase nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}"
+                            href="{{ .URL }}">
+                            {{ .Pre }}
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ if .IsTranslated }}
+                    <li class="ml-3">
+                        <ul class="nav nav-languages">
+                            {{ range .Translations }}
+                            <li>
+                                <a class="nav-link" href="{{ .Permalink }}" alt="{{ .Language.LanguageName }}"
+                                    title="{{ .Language.LanguageName }}">
+                                    <strong class="d-none d-md-inline">{{ upper .Language.LanguageName }}</strong>
+                                    <strong class="d-visible d-sm-none">{{ upper .Language }}</strong>
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                    {{ end }}
+                </ul>
+
+                <ul class="nav nav-secondary">
+                    {{ range .Site.Menus.secondary.ByWeight }}
+                    <li class="nav-item">
+                        <a class="text-uppercase font-weight-bold nav-link{{ if .Identifier }} text-{{ .Identifier }}{{ end }}"
+                            href="{{ .URL }}">
+                            {{ .Pre }}
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

@@ -6,9 +6,7 @@
           {{ range .Site.Menus.footer.ByWeight }}
             <div>
               <a
-                class="mx-1 mr-md-2 ml-md-0{{ if .Identifier }}
-                  text-{{ .Identifier }}
-                {{ end }}"
+                class="ms-1 me-1 ms-md-0 me-md-2{{ if .Identifier }} text-{{ .Identifier }}{{ end }}"
                 href="{{ .URL }}"
               >
                 {{ .Pre }}

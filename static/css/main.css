@@ -131,19 +131,20 @@ h6 {
   color: var(--header-link-color);
   font-family: var(--font-title);
   font-size: 14px;
-  padding: 3px 5px 0 5px;
+  padding: 0 10px 0 0;
+  display: inline;
 }
 
 .header ul.nav li a:hover {
   text-decoration: underline;
 }
 
-.header ul.nav li:first-child a {
-  padding-left: 2px;
+.header ul.nav li.nav-item::before {
+    content: "·";
 }
 
-.header ul.nav li:last-child a {
-  padding-right: 2px;
+.header ul.nav li.nav-item:first-child::before {
+    content: none;
 }
 
 /* Partial: Content */
