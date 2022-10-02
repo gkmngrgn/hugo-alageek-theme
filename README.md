@@ -43,7 +43,7 @@ of the theme._
 
 ## DEPENDENCY VERSIONS
 
-- bootstrap: 5.1.3
+- bootstrap: 5.2.1
 - highlightjs: 11.4.0
 - mathjax: ^3.0.0
 - progressively: latest stable version
