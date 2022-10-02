@@ -1,11 +1,11 @@
-{{- partial "style_bootstrap" . -}}
+{{ partial "style_bootstrap" . }}
 
-{{- partial "style_main" . -}}
+{{ partial "style_main" . }}
 
 {{ if .Site.Params.highlightjs }}
-  {{- partial "style_highlight" . -}}
+  {{ partial "style_highlight" . }}
 {{ end }}
 
 {{ if .Site.Params.progressively }}
-  {{- partial "style_progressively" . -}}
+  {{ partial "style_progressively" . }}
 {{ end }}
