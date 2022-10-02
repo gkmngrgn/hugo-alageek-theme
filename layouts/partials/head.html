@@ -51,6 +51,8 @@
     content="{{ .Description | default .Site.Params.description }}"
   />
 
+  {{ hugo.Generator }}
+
   {{ if .Site.Params.flattr }}
     <meta name="flattr:id" content="{{ .Site.Params.flattr }}" />
   {{ end }}
