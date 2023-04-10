@@ -140,11 +140,11 @@ h6 {
 }
 
 .header ul.nav li.nav-item::before {
-    content: "·";
+  content: "·";
 }
 
 .header ul.nav li.nav-item:first-child::before {
-    content: none;
+  content: none;
 }
 
 /* Partial: Content */
