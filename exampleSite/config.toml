@@ -1,0 +1,100 @@
+author = "Developer"
+baseUrl = "http://localhost/"
+builddrafts = false
+canonifyurls = true
+defaultContentLanguage = "en"
+languageCode = "en"
+layoutdir = "layouts"
+pluralizelisttitles = false
+publishdir = "public"
+theme = "alageek"
+title = "Demo Site"
+paginate = 20
+
+[permalinks]
+blog = "/blog/:year/:month/:slug/"
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark.renderer]
+unsafe = true
+xhtml = true
+
+[params]
+description = "Developer Blog"
+faviconfile = ""
+logofile = ""
+latestpostcount = 10
+highlightjs = true
+highlightjslanguages = [
+  "bash",
+  "csharp",
+  "css",
+  "diff",
+  "django",
+  "dockerfile",
+  "golang",
+  "javascript",
+  "lisp",
+  "nginx",
+  "powershell",
+  "python",
+  "rust",
+  "yaml"
+]
+posts_navigation = true
+progressively = true
+linkedin = "" # just username
+twitter = "" # just username
+mastodon_url = "" # full url for your profile
+email = "" # email address
+
+# TRANSLATABLE SETTINGS
+
+## ENGLISH
+
+[languages.en]
+languageName = "English"
+contentDir = "content-en"
+weight = 10
+
+[languages.en.params]
+copyright = "© 2018 by Theme Developer."
+copyrightUrl = "/license/"
+
+[[languages.en.menu.primary]]
+identifier = "theme"
+name = "THEME"
+url = "https://github.com/gkmngrgn/hugo-alageek-theme"
+weight = 10
+
+[[languages.en.menu.primary]]
+identifier = "author"
+name = "AUTHOR"
+url = "https://gokmengorgen.net"
+weight = 20
+
+[[languages.en.menu.secondary]]
+identifier = "dosh-core"
+name = "DOSH-CORE"
+url = "https://github.com/gkmngrgn/dosh-core#readme"
+weight = 100
+
+[[languages.en.menu.secondary]]
+identifier = "dosh-cli"
+name = "DOSH-CLI"
+url = "https://github.com/gkmngrgn/dosh-cli#readme"
+weight = 110
+
+[[languages.en.menu.secondary]]
+identifier = "tile"
+name = "TILE"
+url = "https://goedev.itch.io/tile"
+weight = 120
+
+[[languages.en.menu.footer]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 50
