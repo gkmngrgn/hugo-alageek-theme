@@ -1,8 +1,8 @@
 name = "alaGeek"
 license = "MIT"
-licenselink = "https://github.com/gkmngrgn/hugo-alageek-theme/blob/master/LICENSE.md"
+licenselink = "https://github.com/gkmngrgn/hugo-alageek-theme/blob/main/LICENSE.md"
 description = "A Cocoa Enhanced based theme. It's rewritten with Bootstrap 5."
-homepage = "https://git.gokmengorgen.net/goedev/hugo-alageek-theme"
+homepage = "https://github.com/gkmngrgn/hugo-alageek-theme"
 tags = ["clean", "fast", "responsive", "typography", "disqus", "light", "dark", "syntax-highlighting"]
 features = ["clean", "fast", "responsive", "typography", "disqus", "light", "dark", "syntax-highlighting"]
 min_version = "0.41.0"
