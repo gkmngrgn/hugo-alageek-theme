@@ -12,8 +12,9 @@ Websites that are using Hugo with alaGeek theme:
 - https://alageek.com
 - https://gokmengorgen.net
 
-_Feel free to open a pull-request to add your website here, I'll check this list every
-new version. You don't need to use the latest version of the theme._
+~Feel free to open a pull-request to add your website here, I'll check this list every new version. You don't need to use the latest version of the theme.~
+
+**NEW UPDATE:** I don't use Hugo anymore. Please fork and develop if you still need this theme.
 
 ## FEATURES
 
